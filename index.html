@@ -1,0 +1,268 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink Clone</title>
+    <!-- Bootstrap 5.3 CSS (Bootstrap Studio đã tích hợp sẵn, bạn không cần thêm nếu đã chọn phiên bản này trong dự án) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+        }
+
+        /* Main Section */
+        .main {
+            height: 100vh;
+            background: url('background.jpg') no-repeat center center/cover; /* Thay bằng ảnh của bạn trong Bootstrap Studio */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .main h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .watch-now {
+            border: 1px solid white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .watch-now::after {
+            content: "▶";
+            margin-left: 5px;
+        }
+
+        /* Cards Section */
+        .cards {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .order-now {
+            background: white;
+            color: black;
+        }
+
+        .learn-more {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 200px;
+            background: #1a1a1a;
+            padding: 20px;
+            transform: translateX(100%); /* Ẩn sidebar ban đầu */
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .sidebar.show {
+            transform: translateX(0); /* Hiện sidebar khi nhấn nút */
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* Header */
+        .navbar {
+            background: transparent !important;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        /* Custom hamburger button */
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="logo_white.png" width="180" height="30" alt="Starlink Logo" /></a>
+            <!-- Add toggle button for sidebar -->
+            <button type="button" class="navbar-toggle hamburger" style="border: none; color: white;">
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav">
+                <li><a href="#" style="color: white;">RESIDENTIAL</a></li>
+                <li><a href="#" style="color: white;">ROAM</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" style="color: white;">PERSONAL</a></li>
+                <li><a href="#" style="color: white;">BUSINESS</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand text-white fw-bold" href="#">STARLINK</a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">RESIDENTIAL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">ROAM</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">
+                <a class="text-white text-decoration-none me-3" href="#">PERSONAL</a>
+                <a class="text-white text-decoration-none me-3" href="#">BUSINESS</a>
+                <!-- Hamburger button -->
+                <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="main">
+        <h1>HIGH-SPEED INTERNET<br>AROUND THE WORLD</h1>
+        <p class="my-3">Connect at home or on the go.</p>
+        <a href="#" class="watch-now">WATCH NOW</a>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards">
+        <div class="container">
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">RESIDENTIAL</h3>
+                            <p class="card-text">Connect at home</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn order-now">ORDER NOW</a>
+                                <a href="#" class="btn learn-more">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">ROAM</h3>
+                            <p class="card-text">Connect while traveling anywhere in over 100 markets</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <a href="#" class="btn order-now">ORDER NOW</a>
+                                <a href="#" class="btn learn-more">LEARN MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="#">US</a>
+        <a href="#">SIGN IN</a>
+        <a href="#">HELP CENTER</a>
+        <a href="#">AVAILABILITY MAP</a>
+        <a href="#">SPECIFICATIONS</a>
+        <a href="#">SERVICE PLANS</a>
+        <a href="#">VIDEO GUIDES</a>
+        <a href="#">TECHNOLOGY</a>
+        <a href="#">UPDATES</a>
+        <a href="#">CUSTOMER STORIES</a>
+    </div>
+
+    <!-- JavaScript to toggle sidebar -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+
+    <!-- Bootstrap 5.3 JS (Bootstrap Studio đã tích hợp sẵn, bạn không cần thêm nếu đã chọn phiên bản này trong dự án) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
