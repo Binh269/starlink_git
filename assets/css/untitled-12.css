@@ -1,0 +1,13 @@
+@media (max-width: 767px) {
+  #feature-section .col-md-4:not(:first-child) {
+    border-left: none;
+    border-top: 1px solid #ffffff;
+  }
+}
+
+@media (max-width: 767px) {
+  #feature-section .col-md-4 {
+    padding: 15px 0;
+  }
+}
+
