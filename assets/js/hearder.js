@@ -23,3 +23,5 @@ document.querySelector('.maritime').addEventListener('click', function() {
 document.querySelector('.direct_to_cell').addEventListener('click', function() {
     window.location.href = 'business_direct-to-cell.html';
 });
+
+

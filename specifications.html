@@ -30,15 +30,15 @@
 
 <body>
     <section class="py-4 py-xl-5" style="background-color: black;">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-nav" style="padding: clamp(20px,1vw,50px) clamp(24px, 4vw, 60px);">
-            <div class="container-fluid" style="text-align: center;justify-content: space-between;"><a class="navbar-brand fw-bold" href="index.html" style="max-width: 180px;"><img src="assets/img/logo_white.png" style="max-width: 180px;" width="180" height="30"></a>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav" style="margin: 0 4% 0 5%;text-align: center;">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="padding: clamp(20px,1vw,50px) clamp(24px, 4vw, 60px);">
+            <div class="container-fluid" style="justify-content: space-between;"><a class="navbar-brand fw-bold" href="index.html" style="max-width: 180px;"><img src="assets/img/logo_white.png" style="max-width: 180px;" width="180" height="30"></a>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav-1" style="margin: 0 4% 0 5%;text-align: center;font-weight: bold;">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link text-white left" href="residential.html">RESIDENTIAL</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="roam.html">ROAM</a></li>
+                        <li class="nav-item"><a class="nav-link text-white left text-uppercase" href="residential.html">Khu dân cư </a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="roam.html">CHUYỂN VÙNG</a></li>
                     </ul>
-                    <div class="d-flex align-items-center"><a class="text-white text-decoration-none" href="index.html" style="margin-right: 1%;">PERSONAL</a><span style="margin: 0 3px;color: white;">|</span><a class="text-white text-decoration-none" href="business.html" style="margin-left: 1%;">BUSINESS</a></div>
-                </div><button class="btn menuToggle" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="width: 30px;height: 40px;color: white;">
+                    <div class="d-flex align-items-center"><a class="text-white text-decoration-none text-uppercase" href="#" style="white-space: nowrap;margin-right: 1%;">Cá nhân&nbsp;</a><span style="margin: 0 3px;color: white;">|</span><a class="text-white text-decoration-none text-uppercase" href="business.html" style="margin-left: 1%;white-space: nowrap;">DOANH NGHIỆP</a></div>
+                </div><button class="btn menuToggle" id="menuToggle-1" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="width: 30px;height: 40px;color: white;">
 
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 4.44772 3.44772 4 4 4H16C16.5523 4 17 4.44772 17 5C17 5.55228 16.5523 6 16 6H4C3.44772 6 3 5.55228 3 5Z" fill="currentColor"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10C3 9.44772 3.44772 9 4 9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H4C3.44772 11 3 10.5523 3 10Z" fill="currentColor"></path>
@@ -46,26 +46,26 @@
                     </svg></button>
             </div>
         </nav>
-        <h1 class="text-white text-center" style="padding-top: 50px;">Specifications</h1>
+        <h1 class="text-white text-center" style="padding-top: 50px;">THÔNG SỐ KỸ THUẬT</h1>
         <div class="offcanvas-backdrop fade overlay" style="display: none;background-color: #f0f8ffd4;"></div>
         <div class="offcanvas offcanvas-end text-bg-dark sidebar" tabindex="-1" aria-labelledby="sidebarLabel" style="width: 250px;font-size: small;">
             <div class="offcanvas-header"><button class="btn close-btn text-white close_btn" id="close_btn" type="button">X</button></div>
             <div class="offcanvas-body">
-                <div class="d-flex flex-column"><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="#">US</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="sign_in.html">SIGN IN</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="help_center.html">HELP CENTER</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="map.html">AVAILABILITY MAP</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="specifications.html">SPECIFICATIONS</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="service_plans.html">SERVICE PLANS</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="video_guides.html">VIDEO GUIDES</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="technology.html">TECHNOLOGY</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="update.html">UPDATES</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="customer_storues.html">CUSTOMER STORIES</a></div>
+                <div class="d-flex flex-column text-uppercase" style="font-weight: bold;"><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="#">VN</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="sign_in.html">Đăng nhập</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="help_center.html">Trung tâm trợ giúp</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="map.html">Bản đồ vùng phủ sóng</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="specifications.html">Thông số kỹ thuật</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="service_plans.html">Gói dịch vụ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="video_guides.html">Video hướng dẫn</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="technology.html">Công nghệ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="update.html">Cập nhật</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="customer_storues.html">Nghiên cứu điển hình</a></div>
             </div>
         </div>
     </section>
     <div class="justify-content-center align-items-center d-flex flex-column text-white" style="background-color: black;padding: 0 15%;">
-        <div class="d-flex flex-row justify-content-center flex-wrap text-white"><span style="padding: 1%;font-size: larger;">Mini</span><span style="padding: 1%;font-size: larger;"><span style="text-decoration: underline;">Standard</span></span><span style="padding: 1%;font-size: larger;">Standard Actuated</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">Enterprise</span></div>
+        <div class="d-flex flex-row justify-content-center flex-wrap text-white" style="width: 100%;"><span style="padding: 1%;font-size: larger;">Mini</span><span style="padding: 1%;font-size: larger;"><span style="text-decoration: underline;">Standard</span></span><span style="padding: 1%;font-size: larger;">Standard Actuated</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">Enterprise</span></div>
         <div class="justify-content-center align-items-center d-flex"><img src="assets/img/Starlink_Standard_Hero_500x500.png"></div>
-        <h1 class="text-white">Standard</h1>
+        <h1 class="text-white">Tiêu chuẩn</h1>
         <div class="text-start" style="border-bottom: 1px solid #808080;border-top: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
-            <h1>Applications</h1>
-            <p style="/*height: 80%;*/">Best for residential users and everyday internet applications like streaming, video calls, online gaming &amp; more. Stay tuned for release updates about this product here.</p>
+            <h1>Ứng dụng</h1>
+            <p style="/*height: 80%;*/">Phù hợp nhất cho người dùng gia đình và các ứng dụng Internet hàng ngày như xem phim trực tuyến, gọi video, chơi game online và nhiều hơn nữa. Hãy theo dõi để nhận các thông tin cập nhật về sản phẩm này tại đây.</p>
         </div>
         <div class="text-start" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
-            <h1>What's in the box</h1>
-            <p style="/*height: 80%;*/">The Starlink Kit arrives with everything you need to get online in minutes.</p>
+            <h1>Trong hộp có gì</h1>
+            <p style="/*height: 80%;*/">Bộ thiết bị Starlink được giao đến với đầy đủ mọi thứ bạn cần để kết nối Internet chỉ trong vài phút.</p>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4 col-xxl-4 offset-sm-2 offset-md-0 offset-lg-1 offset-xl-0 offset-xxl-0"><img class="img-built" src="assets/img/specification_standard_whats_in_the_box_dish.png">
@@ -101,40 +101,40 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Antenna</td>
+                            <td>Ăng-ten</td>
                             <td>Electronic Phased Array</td>
                         </tr>
                         <tr>
-                            <td>Field of View&nbsp;&nbsp;</td>
+                            <td>Góc quan sát</td>
                             <td>110 °</td>
                         </tr>
                         <tr>
-                            <td>Orientation&nbsp;&nbsp;</td>
-                            <td>Software Assisted Manual Orienting</td>
+                            <td>Định hướng</td>
+                            <td>Hỗ trợ định hướng thủ công bằng phần mềm</td>
                         </tr>
                         <tr>
-                            <td>Weight&nbsp;&nbsp;</td>
-                            <td>2.9 kg (6.4 lb), 3.2 kg (7 lb) with Kickstand</td>
+                            <td>Trọng lượng</td>
+                            <td> 2.9 kg (6.4 lb), 3.2 kg (7 lb) kèm chân đế</td>
                         </tr>
                         <tr>
-                            <td>Environmental Rating&nbsp;&nbsp;</td>
-                            <td>IP67 Type 4</td>
+                            <td>Chỉ số chống chịu môi trường</td>
+                            <td>IP67 Loại 4</td>
                         </tr>
                         <tr>
-                            <td>Operating Temperature&nbsp;&nbsp;</td>
-                            <td>-30°C to 50°C (-22°F to 122°F)</td>
+                            <td>Nhiệt độ hoạt động</td>
+                            <td> -30°C đến 50°C (-22°F đến 122°F)</td>
                         </tr>
                         <tr>
-                            <td>Wind Speed&nbsp;&nbsp;</td>
-                            <td>Operational: 96 kph+ (60 mph+)</td>
+                            <td>Tốc độ gió chịu được</td>
+                            <td>Vận hành tốt ở tốc độ gió từ 96 km/h trở lên (60 mph+)</td>
                         </tr>
                         <tr>
-                            <td>Snow Melt Capability&nbsp;&nbsp;</td>
-                            <td>Up to 40 mm / hour (1.5 in / hour)</td>
+                            <td>Khả năng làm tan tuyết</td>
+                            <td>Lên đến 40 mm/giờ (1.5 inch/giờ)</td>
                         </tr>
                         <tr>
-                            <td>Power Consumption&nbsp;&nbsp;</td>
-                            <td>Average: 75 - 100 W</td>
+                            <td>Tiêu thụ điện năng</td>
+                            <td>Trung bình: 75 - 100 W</td>
                         </tr>
                     </tbody>
                 </table>
@@ -160,15 +160,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Product Dimensions&nbsp;</td>
+                            <td>Kích thước sản phẩm</td>
                             <td>43.4 x 298.6 x 120.4 mm (1.7 in x 11.76 in x 4.74 in)</td>
                         </tr>
                         <tr>
-                            <td>Wi-Fi Technology&nbsp;&nbsp;</td>
+                            <td>Công nghệ Wi-Fi</td>
                             <td>802.11 a/b/g/n/ac/ax</td>
                         </tr>
                         <tr>
-                            <td>Generation&nbsp;&nbsp;</td>
+                            <td>Thế hệ</td>
                             <td>Wi-Fi 6</td>
                         </tr>
                         <tr>
@@ -176,36 +176,36 @@
                             <td>Tri Band 4 x 4 MU-MIMO</td>
                         </tr>
                         <tr>
-                            <td>Ethernet Ports&nbsp;&nbsp;</td>
-                            <td>Two (2) Latching Ethernet LAN ports with removable cover</td>
+                            <td>Cổng Ethernet</td>
+                            <td>Hai (2) cổng LAN Ethernet có chốt, kèm nắp che tháo rời</td>
                         </tr>
                         <tr>
-                            <td>Coverage&nbsp;&nbsp;</td>
-                            <td>Up to 297 m² (3,200 ft²)</td>
+                            <td>Phạm vi phủ sóng</td>
+                            <td>Lên đến 297 m² (3,200 ft²)</td>
                         </tr>
                         <tr>
-                            <td>Operating Temperature&nbsp;&nbsp;</td>
-                            <td>-30°C to 50°C (-22°F to 122°F)</td>
+                            <td>Nhiệt độ hoạt động</td>
+                            <td>-30°C đến 50°C (-22°F đến 122°F)</td>
                         </tr>
                         <tr>
-                            <td>Weight&nbsp;&nbsp;</td>
+                            <td>Trọng lượng</td>
                             <td>0.57 kg (1.25 lbs)</td>
                         </tr>
                         <tr>
-                            <td>Environmental Rating&nbsp;&nbsp;</td>
-                            <td>Meeting IP56 (Water Resistant), configured for indoor use</td>
+                            <td>Bảo mật</td>
+                            <td>WPA2</td>
                         </tr>
                         <tr>
-                            <td>Power Indicator&nbsp;&nbsp;</td>
-                            <td>LED | face plate, lower left corner of router</td>
+                            <td>Chỉ số chống chịu môi trường</td>
+                            <td>Đạt tiêu chuẩn IP56 (Chống nước), thiết kế cho sử dụng trong nhà</td>
                         </tr>
                         <tr>
-                            <td>Mesh Compatibility&nbsp;&nbsp;</td>
-                            <td>Compatible with Starlink Gen 2 and Gen 3 Mesh nodes, up to 3 Starlink Mesh Nodes. *Not compatible with 3rd party mesh systems</td>
+                            <td>Khả năng kết nối Mesh</td>
+                            <td>Tương thích với các node Mesh Starlink Gen 2 và Gen 3, hỗ trợ tối đa 3 node Mesh Starlink. *Không tương thích với các hệ thống Mesh của bên thứ ba</td>
                         </tr>
                         <tr>
-                            <td>Devices&nbsp;&nbsp;</td>
-                            <td>Connect up to 235 devices</td>
+                            <td>Thiết bị kết nối</td>
+                            <td>Hỗ trợ kết nối tối đa 235 thiết bị</td>
                         </tr>
                     </tbody>
                 </table>
@@ -232,23 +232,23 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Starlink Power Supply</td>
+                            <td>Kích thước sản phẩm</td>
                             <td>173 x 93 x 35.75 mm (6.8 in x 3.66 in x 1.4 in)</td>
                         </tr>
                         <tr>
-                            <td>Weight&nbsp;&nbsp;</td>
+                            <td>Trọng lượng</td>
                             <td>0.65 kg (1.43 lbs)</td>
                         </tr>
                         <tr>
-                            <td>Environmental Rating&nbsp;&nbsp;</td>
+                            <td>Chỉ số chống chịu môi trường</td>
                             <td>IP66 Type 4</td>
                         </tr>
                         <tr>
-                            <td>Operating Temperature&nbsp;&nbsp;</td>
+                            <td>Nhiệt độ hoạt động</td>
                             <td>-30°C to 60°C (-22°F to 140°F)</td>
                         </tr>
                         <tr>
-                            <td>Power Specifications&nbsp;&nbsp;</td>
+                            <td>Thông số nguồn điện</td>
                             <td>100-240V ~ 2.5A 50 - 60 Hz</td>
                         </tr>
                     </tbody>
@@ -269,31 +269,33 @@
             </div>
         </div>
         <div class="text-start" style="border-bottom: 1px solid #808080;border-top: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
-            <h1>Resources</h1>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp; <span style="text-decoration: underline;">Product Specifications</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Setup Guides</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Starlink App (Android)</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Support</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Setup Video</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Installation Video</span></p>
-            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Installation Video</span></p>
+            <h1>Tài nguyên</h1>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp; Thông số kỹ thuật sản phẩm</p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp; Hướng dẫn cài đặt</p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Ứng dụng Starlink (iOS)</span></p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Ứng dụng Starlink (Android)</span></p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Hỗ trợ</span></p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Video hướng dẫn cài đặt</span></p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Video hướng dẫn lắp đặt</span></p>
+            <p style="/*height: 80%;*/"><i class="fas fa-circle" style="font-size: xx-small;"></i>&nbsp;&nbsp;<span style="text-decoration: underline;">Mô hình 3D sản phẩm</span></p>
         </div>
         <div class="text-start" style="border-top: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
-            <h1>Mounts &amp; Accessories</h1>
-            <p style="padding-top: 2%;"><span style="text-decoration: underline;">Mounts</span> designed to permanently install your Starlink to avoid obstructions will be available for purchase on the Starlink Shop once your Starlink is ordered.</p>
+            <h1>Giá đỡ &amp; Phụ kiện</h1>
+            <p style="padding-top: 2%;">Các giá đỡ được thiết kế để lắp đặt cố định Starlink nhằm tránh vật cản sẽ được bán trên Starlink Shop sau khi bạn đặt hàng thiết bị Starlink.</p>
         </div>
     </div>
-    <footer class="text-white" style="background-color: black;padding-top: 5%;">
+    <footer class="text-white" style="background-color: black;padding-top: 3% 5% 0 5%;">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row align-items-center order-2 order-lg-0" style="/*white-space: nowrap;*/font-size: 13px;"><a href="#">Careers</a><a href="#">Satellite Operators</a><a href="#">Authorized Reseller</a><a href="#">Privacy &amp; Legal</a><a href="#">Privacy Preferences</a></div>
-                <div class="col-12 col-lg-6 text-lg-end d-flex flex-column flex-lg-row justify-content-lg-end align-items-center order-1 order-lg-0 align-items-lg-start"><span class="me-md-3" style="font-size: 11px;padding: 10px 0;">Interested in staying up to date with Starlink?</span>
-                    <div class="input-signup-wrapper"><input type="email" id="input_email_built" class="email-input" placeholder="Email" style="font-size: 12px;background-color: black;color: white;border-top-style: none;border-right-style: none;border-bottom: 1px solid white;border-left-style: none;"><a href="#" style="font-size: 12px;padding-left: 15px;text-align: center;height: auto;white-space: nowrap;">SIGN UP<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a>
-                        <p class="mb-0 privacy-text" style="font-size: 11px;padding: 10px 0;">By clicking SIGN UP, you agree to our Privacy Policy</p>
+                <div class="col-12 col-lg-6 d-flex flex-column flex-lg-row align-items-center order-2 order-lg-0" style="/*white-space: nowrap;*/font-size: 13px;"><a href="#">Nghề nghiệp</a><a href="#">Người vận hành vệ tinh</a><a href="#">Đại lý ủy quyền</a><a href="#">Quyền riêng tư &amp; pháp lý</a><a href="#">Sở thích bảo mật</a></div>
+                <div class="col-12 col-lg-6 text-lg-end d-flex flex-column flex-lg-row justify-content-lg-end align-items-center order-1 order-lg-0 align-items-lg-start"><span class="me-md-3" style="font-size: 11px;padding: 10px 0;">Quan tâm đến việc cập nhật với Starlink? </span>
+                    <div class="input-signup-wrapper" style="width: auto;">
+                        <div class="d-flex flex-nowrap flex-row"><input type="email" id="input_email_built-1" class="email-input" placeholder="Email" style="font-size: 12px;background-color: black;color: white;border-top-style: none;border-right-style: none;border-bottom: 1px solid white;border-left-style: none;width: 100%;"><a class="text-uppercase" href="#" style="font-size: 12px;padding-left: 15px;text-align: center;height: auto;white-space: nowrap;">Đăng ký&nbsp;<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
+                        <p class="mb-0 privacy-text" style="font-size: 11px;padding: 10px 0;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với chúng tôi Chính sách bảo mật</p>
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center"><img class="me-2" src="assets/img/Menu_X.svg" style="padding: 5px 0;"><span class="me-2" style="margin: 5px;white-space: nowrap;">Starlink © 2025</span><span class="me-2" style="margin: 5px;white-space: nowrap;">Starlink is a division of SpaceX. Visit us at spacex.com</span></div>
+            <div class="d-flex flex-column flex-lg-row align-items-center justify-content-start"><img class="me-2" src="assets/img/Menu_X.svg" style="padding: 5px 0;"><span class="me-2" style="margin: 5px;white-space: nowrap;">Starlink © 2025</span><span class="me-2" style="margin: 5px;white-space: nowrap;">Starlink là một bộ phận của SpaceX. Ghé thăm chúng tôi tại&nbsp;<a href="https://www.spacex.com/" target="_blank"><strong>spacex.com</strong></a></span></div>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
@@ -305,6 +307,7 @@
     <script src="assets/js/Media-Slider-Bootstrap-3-media.slider.js"></script>
     <script src="assets/js/Simple-Slider-swiper-bundle.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/dathang.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.0/dist/ol.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js&quot; integrity=&quot;sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer"></script>
     <script src="assets/js/map.js"></script>

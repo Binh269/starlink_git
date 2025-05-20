@@ -32,7 +32,7 @@
     <section class="py-4 py-xl-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('assets/img/home_a_hero_d.jpg') no-repeat center center /cover;min-height: 500px;">
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="padding: clamp(20px,1vw,50px) clamp(24px, 4vw, 60px);">
             <div class="container-fluid" style="justify-content: space-between;"><a class="navbar-brand fw-bold" href="index.html" style="max-width: 180px;"><img src="assets/img/logo_white.png" style="max-width: 180px;" width="180" height="30"></a>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav" style="margin: 0 4% 0 5%;text-align: center;">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav" style="margin: 0 4% 0 5%;text-align: center;font-weight: bold;">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-white left text-uppercase" href="residential.html">Khu dân cư </a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="roam.html">CHUYỂN VÙNG</a></li>
@@ -50,7 +50,7 @@
         <div class="offcanvas offcanvas-end text-bg-dark sidebar" tabindex="-1" aria-labelledby="sidebarLabel" style="width: 250px;font-size: small;">
             <div class="offcanvas-header"><button class="btn close-btn text-white close_btn" id="close_btn" type="button">X</button></div>
             <div class="offcanvas-body">
-                <div class="d-flex flex-column"><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="#">US</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="sign_in.html">SIGN IN</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="help_center.html">HELP CENTER</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="map.html">AVAILABILITY MAP</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="specifications.html">SPECIFICATIONS</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="service_plans.html">SERVICE PLANS</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="video_guides.html">VIDEO GUIDES</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="technology.html">TECHNOLOGY</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="update.html">UPDATES</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="customer_storues.html">CUSTOMER STORIES</a></div>
+                <div class="d-flex flex-column text-uppercase" style="font-weight: bold;"><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="#">VN</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="sign_in.html">Đăng nhập</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="help_center.html">Trung tâm trợ giúp</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="map.html">Bản đồ vùng phủ sóng</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="specifications.html">Thông số kỹ thuật</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="service_plans.html">Gói dịch vụ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="video_guides.html">Video hướng dẫn</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="technology.html">Công nghệ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="update.html">Cập nhật</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="customer_storues.html">Nghiên cứu điển hình</a></div>
             </div>
         </div>
         <div class="main">
@@ -61,21 +61,196 @@
         <div class="cards" style="margin-top: 6%;">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col col-md-5">
+                    <div class="col-md-6 col-md-5">
                         <div class="card" style="background: rgba(255, 255, 255, 0.05);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);height: 100%;">
                             <div class="card-body" style="color: white;padding: clamp(10px, 2vw, 60px);">
                                 <h3 class="card-title text-uppercase">Khu dân cư </h3>
                                 <p class="card-text" style="font-size: small;">Kết nối tại nhà </p>
-                                <div class="d-flex justify-content-start" style="margin-top: 11%;align-items: center;"><a class="btn order-now" role="button" href="#" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a><a class="btn learn-more" role="button" href="#" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a></div>
+                                <div class="d-flex justify-content-start order_index" id="order_index" style="margin-top: 11%;align-items: center;"><a class="btn order-now" role="button" id="btn_kdc" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a><a class="btn learn-more" role="button" id="learn-more_kdc" href="residential.html" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a></div>
+                                <div class="row" id="noidung_kdc" style="display: none;">
+                                    <div class="col-sm-7 col-md-8 col-lg-8 col-xl-7 col-xxl-9 offset-sm-1 offset-md-0 offset-lg-0 offset-xl-1 offset-xxl-0 col-12" style="margin-top: 10px;"><label class="form-label" for="email-1">Địa chỉ dịch vụ</label>
+                                        <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);"><input class="form-control" type="text" id="email-1" name="text" placeholder="LOẠI VÀ CHỌN" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;"><button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url(&quot;assets/img/circular-target-shooting-interface-symbol.png&quot;);background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button></div>
+                                    </div>
+                                    <div class="col-sm-4 col-md-4 col-xxl-3 offset-xl-0 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;font-weight: 700;width: auto;font-size: small;">Đặt hàng ngay</button></div>
+                                    <div class="col-sm-12 offset-sm-0 offset-xxl-0">
+                                        <div style="height: 100%;text-align: center;"><a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Xem Bản đồ Tính Khả Dụng &amp; Tốc Độ<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a><a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Tìm hiểu thêm<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-5">
+                    <div class="col-md-6 col-md-5">
                         <div class="card" style="background: rgba(255, 255, 255, 0.1);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);height: 100%;">
                             <div class="card-body" style="color: white;padding: clamp(10px, 2vw, 60px);">
                                 <h3 class="card-title">CHUYỂN VÙNG</h3>
                                 <p class="card-text" style="font-size: small;">Kết nối trong khi đi du lịch bất cứ nơi nào trong hơn 100 thị trường </p>
-                                <div class="d-flex justify-content-start" style="margin-top: 11%;align-items: center;"><a class="btn order-now" role="button" href="#" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a><a class="btn learn-more" role="button" href="#" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a></div>
+                                <div class="d-flex justify-content-start" style="margin-top: 11%;align-items: center;"><a class="btn order-now" role="button" id="btn_cv" href="#" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a><a class="btn learn-more" role="button" id="learn-more_cv" href="roam.html" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a></div>
+                                <div class="row" id="noidung_cv" style="display: none;">
+                                    <div class="col-xxl-12">
+                                        <p>Starlink chuyển vùng không khả dụng tại khu vực của bạn. Vui lòng chọn một quốc gia hợp lệ mà Starlink Roam có thể được mua và giao hàng.</p>
+                                    </div><div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-9 offset-sm-1 offset-md-0 offset-lg-0 offset-xl-0 offset-xxl-0 col-12 d-flex justify-content-center  align-items-center" style="margin-top: 10px;">
+    <div class="dropdown" style='position: relative;    
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height:100%;
+    min-height:40px;                             
+;
+    border: 1px solid;'>
+    <button id="list_qg" class="btn dropdown-toggle" type="button" style="    width: 100%;
+    color: white;
+    font-weight: 600;">CHỌN QUỐC GIA</button>
+    <div id="list-nd-qg" class="dropdown-menu" style="position: absolute; 
+        top: 100%; 
+        left: 0;
+        z-index: 1000; 
+        min-height: 300px;
+        max-height: 300px; 
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%; 
+        padding: 8px 0; 
+        background-color: #424242;
+        color: white;">
+<a class="dropdown-item" href="#">Quần đảo Aland</a>
+        <a class="dropdown-item" href="#">Albania</a>
+        <a class="dropdown-item" href="#">Samoa thuộc Mỹ</a>
+        <a class="dropdown-item" href="#">Argentina</a>
+        <a class="dropdown-item" href="#">Armenia</a>
+        <a class="dropdown-item" href="#">Úc</a>
+        <a class="dropdown-item" href="#">Áo</a>
+        <a class="dropdown-item" href="#">Azerbaijan</a>
+        <a class="dropdown-item" href="#">Bahamas</a>
+        <a class="dropdown-item" href="#">Bahrain</a>
+        <a class="dropdown-item" href="#">Bangladesh</a>
+        <a class="dropdown-item" href="#">Barbados</a>
+        <a class="dropdown-item" href="#">Bỉ</a>
+        <a class="dropdown-item" href="#">Bhutan</a>
+        <a class="dropdown-item" href="#">Brazil</a>
+        <a class="dropdown-item" href="#">Bulgaria</a>
+        <a class="dropdown-item" href="#">Burundi</a>
+        <a class="dropdown-item" href="#">Canada</a>
+        <a class="dropdown-item" href="#">Cape Verde</a>
+        <a class="dropdown-item" href="#">Chile</a>
+        <a class="dropdown-item" href="#">Đảo Giáng Sinh</a>
+        <a class="dropdown-item" href="#">Quần đảo Cocos</a>
+        <a class="dropdown-item" href="#">Colombia</a>
+        <a class="dropdown-item" href="#">Quần đảo Cook</a>
+        <a class="dropdown-item" href="#">Costa Rica</a>
+        <a class="dropdown-item" href="#">Croatia</a>
+        <a class="dropdown-item" href="#">Síp</a>
+        <a class="dropdown-item" href="#">Cộng hòa Séc</a>
+        <a class="dropdown-item" href="#">Đan Mạch</a>
+        <a class="dropdown-item" href="#">Cộng hòa Dominica</a>
+        <a class="dropdown-item" href="#">Đông Timor</a>
+        <a class="dropdown-item" href="#">Ecuador</a>
+        <a class="dropdown-item" href="#">El Salvador</a>
+        <a class="dropdown-item" href="#">Estonia</a>
+        <a class="dropdown-item" href="#">Fiji</a>
+        <a class="dropdown-item" href="#">Phần Lan</a>
+        <a class="dropdown-item" href="#">Pháp</a>
+        <a class="dropdown-item" href="#">Guiana thuộc Pháp</a>
+        <a class="dropdown-item" href="#">Georgia</a>
+        <a class="dropdown-item" href="#">Đức</a>
+        <a class="dropdown-item" href="#">Ghana</a>
+        <a class="dropdown-item" href="#">Hy Lạp</a>
+        <a class="dropdown-item" href="#">Guadeloupe</a>
+        <a class="dropdown-item" href="#">Guam</a>
+        <a class="dropdown-item" href="#">Guatemala</a>
+        <a class="dropdown-item" href="#">Guernsey</a>
+        <a class="dropdown-item" href="#">Guyana</a>
+        <a class="dropdown-item" href="#">Haiti</a>
+        <a class="dropdown-item" href="#">Đảo Heard và Quần đảo McDonald</a>
+        <a class="dropdown-item" href="#">Honduras</a>
+        <a class="dropdown-item" href="#">Hungary</a>
+        <a class="dropdown-item" href="#">Iceland</a>
+        <a class="dropdown-item" href="#">Indonesia</a>
+        <a class="dropdown-item" href="#">Ireland</a>
+        <a class="dropdown-item" href="#">Đảo Man</a>
+        <a class="dropdown-item" href="#">Ý</a>
+        <a class="dropdown-item" href="#">Jamaica</a>
+        <a class="dropdown-item" href="#">Nhật Bản</a>
+        <a class="dropdown-item" href="#">Jersey</a>
+        <a class="dropdown-item" href="#">Jordan</a>
+        <a class="dropdown-item" href="#">Kenya</a>
+        <a class="dropdown-item" href="#">Kiribati</a>
+        <a class="dropdown-item" href="#">Kosovo</a>
+        <a class="dropdown-item" href="#">Latvia</a>
+        <a class="dropdown-item" href="#">Litva</a>
+        <a class="dropdown-item" href="#">Luxembourg</a>
+        <a class="dropdown-item" href="#">Macedonia</a>
+        <a class="dropdown-item" href="#">Madagascar</a>
+        <a class="dropdown-item" href="#">Malaysia</a>
+        <a class="dropdown-item" href="#">Maldives</a>
+        <a class="dropdown-item" href="#">Malta</a>
+        <a class="dropdown-item" href="#">Martinique</a>
+        <a class="dropdown-item" href="#">Mayotte</a>
+        <a class="dropdown-item" href="#">Mexico</a>
+        <a class="dropdown-item" href="#">Micronesia</a>
+        <a class="dropdown-item" href="#">Moldova</a>
+        <a class="dropdown-item" href="#">Mông Cổ</a>
+        <a class="dropdown-item" href="#">Mozambique</a>
+        <a class="dropdown-item" href="#">Nauru</a>
+        <a class="dropdown-item" href="#">Hà Lan</a>
+        <a class="dropdown-item" href="#">New Zealand</a>
+        <a class="dropdown-item" href="#">Niger</a>
+        <a class="dropdown-item" href="#">Đảo Norfolk</a>
+        <a class="dropdown-item" href="#">Quần đảo Bắc Mariana</a>
+        <a class="dropdown-item" href="#">Na Uy</a>
+        <a class="dropdown-item" href="#">Panama</a>
+        <a class="dropdown-item" href="#">Paraguay</a>
+        <a class="dropdown-item" href="#">Peru</a>
+        <a class="dropdown-item" href="#">Philippines</a>
+        <a class="dropdown-item" href="#">Ba Lan</a>
+        <a class="dropdown-item" href="#">Bồ Đào Nha</a>
+        <a class="dropdown-item" href="#">Puerto Rico</a>
+        <a class="dropdown-item" href="#">Reunion</a>
+        <a class="dropdown-item" href="#">Romania</a>
+        <a class="dropdown-item" href="#">Rwanda</a>
+        <a class="dropdown-item" href="#">Saint Barthelemy</a>
+        <a class="dropdown-item" href="#">Saint Martin</a>
+        <a class="dropdown-item" href="#">Saint Vincent và Grenadines</a>
+        <a class="dropdown-item" href="#">Samoa</a>
+        <a class="dropdown-item" href="#">Sierra Leone</a>
+        <a class="dropdown-item" href="#">Slovakia</a>
+        <a class="dropdown-item" href="#">Slovenia</a>
+        <a class="dropdown-item" href="#">Quần đảo Solomon</a>
+        <a class="dropdown-item" href="#">Nam Sudan</a>
+        <a class="dropdown-item" href="#">Tây Ban Nha</a>
+        <a class="dropdown-item" href="#">Svalbard và Jan Mayen</a>
+        <a class="dropdown-item" href="#">Thụy Điển</a>
+        <a class="dropdown-item" href="#">Thụy Sĩ</a>
+        <a class="dropdown-item" href="#">Tonga</a>
+        <a class="dropdown-item" href="#">Trinidad và Tobago</a>
+        <a class="dropdown-item" href="#">Tuvalu</a>
+        <a class="dropdown-item" href="#">Quần đảo Virgin thuộc Mỹ</a>
+        <a class="dropdown-item" href="#">Ukraine</a>
+        <a class="dropdown-item" href="#">Vương quốc Anh</a>
+        <a class="dropdown-item" href="#">Hoa Kỳ</a>
+        <a class="dropdown-item" href="#">Uruguay</a>
+        <a class="dropdown-item" href="#">Vanuatu</a>
+        <a class="dropdown-item" href="#">Yemen</a>
+    </div>
+</div>
+</div>
+                                    <div class="col-sm-4 col-lg-4 col-xl-4 col-xxl-3 offset-xl-0 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block text-uppercase" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;font-weight: 700;width: auto;font-size: small;">Đặt hàng ngay</button></div>
+                                    <div class="col-xl-12">
+                                        <p style="padding-top: 5%;">Hoặc nhập email của bạn bên dưới để được thông báo khi có hàng và cập nhật sản phẩm trong tương lai.</p>
+                                    </div>
+                                    <div class="col-lg-12 d-flex flex-column">
+                                        <div class="row">
+                                            <div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-9 offset-sm-1 offset-md-0 offset-lg-0 offset-xl-0 offset-xxl-0 col-12" style="margin-top: 10px;"><input type="email" placeholder="Email" style="background-position: center;background-repeat: no-repeat;border: none;background-color: hsla(0, 0%, 100%, .15);padding: 1% 5%;width: 100%;min-height: 40px;height: 100%;"></div>
+                                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-3 offset-md-0 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;font-weight: 700;width: auto;">ĐĂNG KÝ</button></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <p style="padding: 10% 0 1%;font-size: x-small;">Bằng cách nhấp vào Đăng ký, bạn đồng ý với Chính sách quyền riêng tư của chúng tôi.</p>
+                                    </div>
+                                    <div class="col">
+                                        <div style="height: 100%;text-align: center;"><a class="btn btn-lg col-xl-5" role="button" href="roam.html" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Tìm hiểu thêm<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +261,7 @@
     <section class="py-4 py-xl-5" style="background-color: black;color: white;">
         <div style="/*background-color: black;*/height: 290px;padding-top: 7%;">
             <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2.5vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;"><strong>STARLINK CHO DOANH NGHIỆP VÀ NGƯỜI DÙNG CHUYÊN SÂU</strong></p>
-            <div class="justify-content-center flex-row align-items-center flex-wrap" style="display: flex;margin-top: 2%;"><span class="text-uppercase" style="padding: 0 10px;text-align: center;">Internet tốc độ cao đáng tin cậy, được thiết kế để giữ các doanh nghiệp luôn kết nối.</span><button class="btn justify-content-center text-uppercase" type="button" style="width: auto;font-weight: 800;color: white;font-size: x-small;display: flex;align-items: center;">Tìm hiểu thêm<i class="fas fa-chevron-right" id="icon_play-1" style="margin: 5px;font-size: 15px;"></i></button></div>
+            <div class="justify-content-center flex-row align-items-center flex-wrap" style="display: flex;margin-top: 2%;"><span class="text-uppercase" style="padding: 0 10px;text-align: center;">Internet tốc độ cao đáng tin cậy, được thiết kế để giữ các doanh nghiệp luôn kết nối.</span><a href="business.html"><button class="btn justify-content-center text-uppercase" type="button" style="width: auto;font-weight: 800;color: white;font-size: x-small;display: flex;align-items: center;">Tìm hiểu thêm<i class="fas fa-chevron-right" id="icon_play-1" style="margin: 5px;font-size: 15px;"></i></button></a></div>
         </div>
     </section>
     <div style="background: url('assets/img/home_a_feature1_d.webp') no-repeat center center / cover;color: white;padding: 5% 0 20%;">
@@ -152,7 +327,7 @@
                         <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;font-weight: 700;width: auto;">Đặt hàng ngay</button></div>
                     </div>
                 </form>
-                <div style="height: 100%;text-align: center;"><a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Xem Bản đồ Tính Khả Dụng &amp; Tốc Độ<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
+                <div style="height: 100%;text-align: center;"><a class="btn btn-lg col-xl-5" role="button" href="map.html" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Xem Bản đồ Tính Khả Dụng &amp; Tốc Độ<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
             </div>
         </section>
     </div>
@@ -179,6 +354,7 @@
     <script src="assets/js/Media-Slider-Bootstrap-3-media.slider.js"></script>
     <script src="assets/js/Simple-Slider-swiper-bundle.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/dathang.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.0/dist/ol.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js&quot; integrity=&quot;sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer"></script>
     <script src="assets/js/map.js"></script>

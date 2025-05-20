@@ -1,5 +1,5 @@
 @media (min-width:992px) {
-  .gach_giua.col-xl-4:not(:last-child)::after, .col-xxl-4:not(:last-child)::after, .col-lg-4:not(:last-child)::after {
+  .gach_giua.col-xl-4:not(:last-child)::after, .gach_giua.col-xxl-4:not(:last-child)::after, .gach_giua.col-lg-4:not(:last-child)::after {
     content: "";
     position: absolute;
     right: 0;
