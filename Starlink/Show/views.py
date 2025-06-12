@@ -17,3 +17,9 @@ def map(requrst):
 
 def order(request):
 	return render(request, 'order.html')
+
+def residential(request):
+	return render(request, 'residential.html')
+
+def roam(request):
+	return render(request, 'roam.html')
