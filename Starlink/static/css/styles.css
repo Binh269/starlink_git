@@ -1,0 +1,16 @@
+.left {
+}
+
+.main {
+  background-image: initial;
+}
+
+.navbar-brand {
+  margin-right: 0px;
+}
+
+#icon_play:hover {
+  transform: scale(1.2);
+  font-weight: 500;
+}
+

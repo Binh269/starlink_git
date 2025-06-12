@@ -1,0 +1,6 @@
+a {
+  text-decoration: none;
+  color: white;
+  margin: 10px clamp(5px , 1vw ,7px);
+}
+

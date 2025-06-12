@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<section class="py-4 py-xl-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.88)), url('{% static 'img/technology_hero_d.webp' %}') no-repeat center center /cover;min-height: 500px;">
+        <div class="main">
+            <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);margin-bottom: 0rem;"><br>
+                <strong>CÔNG NGHỆ VỆ TINH</strong>
+            </p>
+            <p style="text-align: center;color: white;width: auto;font-size: clamp(10px, 2vw, 25px);height: auto;font-weight: 300;margin: 0% 20%;">Starlink là chòm sao vệ tinh đầu tiên và lớn nhất thế giới sử dụng quỹ đạo thấp quanh Trái Đất (LEO) để cung cấp internet băng thông rộng, có khả năng hỗ trợ xem phim trực tuyến, chơi game online, gọi video và nhiều hơn nữa.<br><br></p>
+            <p style="text-align: center;color: white;width: auto;font-size: clamp(10px, 2vw, 25px);height: auto;font-weight: 300;margin: 1% 20%;">Bằng cách tận dụng các vệ tinh tiên tiến, thiết bị người dùng hiện đại và kinh nghiệm dày dặn trong cả thiết kế tàu vũ trụ lẫn vận hành trên quỹ đạo, Starlink mang đến kết nối internet tốc độ cao và độ trễ thấp cho người dùng trên toàn thế giới.</p>
+            <div class="justify-content-center flex-row" style="display: flex;"></div>
+        </div>
+    </section>
+    <div style="color: white;background-attachment: fixed;background-color: black;">
+        <div class="row g-0">
+            <div class="col-md-6 offset-xl-1 offset-xxl-0 order-first order-md-last">
+                <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/technology_feature1_d.webp' %}" style="width: 100%;height: 100%;">
+            </div>
+            <div class="col-md-5 col-xxl-6 offset-xxl-0 d-md-flex align-items-md-center">
+                <div style="padding: 0 10%;">
+                    <h2 class="text-uppercase fw-bold">TIẾP CẬN KHÔNG GIAN THƯỜNG XUYÊN</h2>
+                    <p>Là nhà cung cấp dịch vụ phóng hàng đầu thế giới, SpaceX là nhà vận hành vệ tinh duy nhất có khả năng tự phóng vệ tinh của mình bất cứ khi nào cần thiết. Với các lần phóng thường xuyên và chi phí thấp, các vệ tinh Starlink luôn được cập nhật với công nghệ mới nhất.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4 gy-md-0">
+            <div class="col-md-6 offset-xl-0">
+                <img class="rounded img-fluid" src="{% static 'img/technology_feature2_d.webp' %}" style="width: 100%;height: 100%;" width="585" height="586">
+            </div>
+            <div class="col-md-5 col-xxl-6 offset-xxl-0 d-md-flex align-items-md-center" style="padding: 0 5%;background: url('{% static 'img/residentaial_illustriation3_d.webp' %}') no-repeat right center / 150%;">
+                <div>
+                    <h2 class="text-uppercase fw-bold">BỀN VỮNG TRONG KHÔNG GIAN</h2>
+                    <p style="padding-top: 2%;">Để biết thông tin về cách phối hợp tránh va chạm hiệu quả và minh bạch, hãy truy cập trang dành cho nhà vận hành vệ tinh của chúng tôi.\</p>
+                    <p>Để tải xuống dữ liệu quỹ đạo (ephemerides) mới nhất của vệ tinh Starlink, hoặc gửi dữ liệu quỹ đạo của vệ tinh riêng để kiểm tra va chạm nhanh chóng, vui lòng tham khảo tài liệu hướng dẫn hệ thống kiểm tra va chạm.</p>
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <div class="col-xxl-12" style="background-color: black;color: white;">
+        <div style="width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div class="d-flex flex-nowrap align-items-center px-3" style="width: 100%;max-width: 85%;overflow: visible;">
+                <button class="btn text-white" type="button" onclick="scrollContainer(-200, &#39;dragContainer-2&#39;)">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <div id="dragContainer-2" class="drag-container" role="region" aria-label="Image carousel" style="/*padding-left: 15px;*//*margin-left: -15px;*//*align-items: center;*//*justify-content: center;*//*width: 91%;*/">
+                    <div class="items-wrapper" style="width: 100%;">
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_ethernet_adapter.webp' %}" alt="Starlink">
+                            <h4 class="text-start"> Less Mass, More Compact </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each satellite features a compact, flat-panel design that minimizes volume, allowing for a dense launch stack to take full advantage of SpaceX’s Falcon 9 rocket’s launch capabilities. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_mesh_wifi_router.webp' %}">
+                            <h4 class="text-start"> Star Tracker </h4>
+                            <p class="text-start" style="max-width: 350px;"> Starlink’s custom-built navigation sensors survey the stars to determine each satellite’s location, altitude, and orientation, enabling precise placement of broadband throughput. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_ground_pole_mount.webp' %}">
+                            <h4 class="text-start"> Optical Space Lasers </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each Starlink satellite contains 3 space lasers (Optical Intersatellite Links or ISLs) operating at up to 200 Gbps, which together across the constellation form a global internet mesh that can connect customers anywhere in the world. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_short_wall_mount.webp' %}">
+                            <h4 class="text-start"> Antennas </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each Starlink satellite uses 5 advanced Ku-band phased array antennas and 3 dual-band (Ka-band and E-band) antennas to provide high-bandwidth connectivity to Starlink customers. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_long_wall_mount.webp' %}">
+                            <h4 class="text-start"> Less Mass, More Compact </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each satellite features a compact, flat-panel design that minimizes volume, allowing for a dense launch stack to take full advantage of SpaceX’s Falcon 9 rocket’s launch capabilities. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_pivot_mount.webp' %}">
+                            <h4> Less Mass, More Compact </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each satellite features a compact, flat-panel design that minimizes volume, allowing for a dense launch stack to take full advantage of SpaceX’s Falcon 9 rocket’s launch capabilities. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_ridgeline_mount.webp' %}">
+                            <h4> Less Mass, More Compact </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each satellite features a compact, flat-panel design that minimizes volume, allowing for a dense launch stack to take full advantage of SpaceX’s Falcon 9 rocket’s launch capabilities. </p>
+                        </div>
+                        <div class="item">
+                            <img class="img-built" src="{% static 'img/accessories_actuated_ground_pole_mount.webp' %}">
+                            <h4> Less Mass, More Compact </h4>
+                            <p class="text-start" style="max-width: 350px;"> Each satellite features a compact, flat-panel design that minimizes volume, allowing for a dense launch stack to take full advantage of SpaceX’s Falcon 9 rocket’s launch capabilities. </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn text-white" type="button" onclick="scrollContainer(200, &#39;dragContainer-2&#39;)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock main %}

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+    <section class="py-4 py-xl-5" style="min-height: 500px;background-color: black;">
+        <div class="main text-white d-flex flex-row" style="padding-top: 12%;">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 offset-lg-1" style="font-weight: 600;">
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: large;font-weight: bold;">
+                        <span>Trang chủ Trung tâm Trợ giúp</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Tài khoản</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Thanh toán</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Đơn hàng</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Gói dịch vụ</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Cài đặt &amp; Lắp đặt</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span class="text-start">Thông số kỹ thuật &amp; Cấu hình</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="d-flex flex-row text-white justify-content-between text-center align-items-center" style="padding: 5%;font-size: initial;">
+                        <span>Khắc phục sự cố</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-7 col-xxl-7">
+                    <div style="background: url('{% static 'img/help_center_hero.webp' %}') no-repeat center center / cover;color: white;">
+                        <div class="d-flex flex-column justify-content-center align-items-center" style="padding: 15%;">
+                            <h3 class="text-uppercase fw-bold">TRUNG TÂM TRỢ GIÚP STARLINK</h3>
+                            <p>Thông tin, hướng dẫn và tài nguyên để giúp bạn kết nối.</p>
+                            <p style="padding-bottom: 5%;">Đăng nhập để nhận hỗ trợ nâng cao.</p>
+                            <div class="input-group" style="background-color: #121212;">
+                                <input class="form-control" type="text" id="text_input_built" name="text" placeholder="Tìm kiếm bài viết hỗ trợ" style="background-color: hsla(0, 0%, 100%, .15);color: #ffffff;caret-color: #fff;border: none;">
+                                <button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;">
+                                    <i class="fas fa-search" style="color: rgba(255,255,255,0.5);"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Tài nguyên</h3>
+                        <div class="row gy-4 gy-md-0 text-white" style="padding: 5% 0;background-color: black;">
+                            <div class="col col-4">
+                                <img class="rounded img-fluid" src="{% static 'img/help_center_resources_video_guides.webp' %}" style="width: 100%;height: 100%;">
+                                <h6>Video Hướng Dẫn</h6>
+                            </div>
+                            <div class="col col-4">
+                                <img class="rounded img-fluid" src="{% static 'img/help_center_resources_specifications.webp' %}" style="width: 100%;height: 100%;">
+                                <h6>Thông Số Kỹ Thuật</h6>
+                            </div>
+                            <div class="col col-4">
+                                <img class="rounded img-fluid" src="{% static 'img/help_center_resources_starlink_app.webp' %}" style="width: 100%;height: 100%;">
+                                <h6>Ứng Dụng Starlink</h6>
+                            </div>
+                            <div></div>
+                        </div>
+                        <h4 style="padding: 8% 0 2% 0;">Frequently Asked Questions</h4>
+                        <p>
+                            <span style="text-decoration: underline;">Liên hệ với Bộ phận Hỗ trợ Khách hàng Starlink</span>
+                        </p>
+                        <p>
+                            <span style="text-decoration: underline;">Làm cách nào để tải ứng dụng Starlink?</span>
+                        </p>
+                        <p>
+                            <span style="text-decoration: underline;">Các gói dịch vụ của Starlink là gì?</span>
+                        </p>
+                        <p>
+                            <span style="text-decoration: underline;">Làm sao để tôi thay đổi gói dịch vụ của mình?</span>
+                        </p>
+                        <p>
+                            <span style="text-decoration: underline;">Trong bộ Starlink của tôi có những gì?</span>
+                        </p>
+                        <p>
+                            <span style="text-decoration: underline;">Làm sao để tôi thiết lập Starlink?</span>
+                        </p>
+                        <h4 style="padding: 8% 0 2% 0;">Liên hệ Hỗ trợ</h4>
+                        <p>Không tìm thấy điều bạn đang cần? Hãy liên hệ với bộ phận hỗ trợ khách hàng.</p>
+                        <button class="btn text-white" type="button">Liên hệ Hỗ trợ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock main %}
