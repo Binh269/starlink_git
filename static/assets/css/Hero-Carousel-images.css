@@ -1,0 +1,35 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input::placeholder, textarea::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input::placeholder, textarea::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+#email::placeholder {
+  color: white !important;
+  opacity: 1;
+  font-size: small;
+}
+

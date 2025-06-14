@@ -1,0 +1,38 @@
+@media (min-width:992px) {
+  .testimonial-row .col-xl-4:not(:last-child)::after, .testimonial-row .col-xxl-4:not(:last-child)::after, .testimonial-row .col-lg-4:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width:992px) {
+  .testimonial-row .col-xl-4:first-child::before, .testimonial-row .col-xxl-4:first-child::before, .testimonial-row .col-lg-4:first-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width:992px) {
+  .testimonial-row .col-xl-4, .testimonial-row .col-xxl-4, .testimonial-row .col-lg-4 {
+    position: relative;
+  }
+}
+
+/* Explicitly remove the ::before and ::after pseudo-elements */
+
+@media (max-width: 991.98px) {
+  .testimonial-row .col-xl-4::before, .testimonial-row .col-xxl-4::before, .testimonial-row .col-lg-4::before, .testimonial-row .col-xl-4::after, .testimonial-row .col-xxl-4::after, .testimonial-row .col-lg-4::after {
+    content: none;
+  }
+}
+

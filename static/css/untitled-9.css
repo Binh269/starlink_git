@@ -1,0 +1,12 @@
+@media (min-width:992px) {
+  .gach_giua.col-xl-4:not(:last-child)::after, .gach_giua.col-xxl-4:not(:last-child)::after, .gach_giua.col-lg-4:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #ffffff;
+  }
+}
+
