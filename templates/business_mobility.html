@@ -60,7 +60,9 @@
                 <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 400;margin-bottom: auto;">Internet tốc độ cao đáng tin cậy khi đang di chuyển.</p>
                 <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2.5vw, 35px);height: auto;font-weight: 400;margin-bottom: auto;padding: 5% 15%;"><strong><span style="text-decoration: underline;">Liên hệ với đội ngũ của chúng tôi</span> hoặc <span style="text-decoration: underline;">xem hướng dẫn mua hàng</span>.</strong></p>
             </div>
-            <div class="d-flex justify-content-center" style="padding: 5%;"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;max-width: 200px;font-weight: bold;">ĐẶT HÀNG NGAY</button></div>
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="{% url 'order' product_code='DNQT001' %}" class="btn btn-light" style="height: auto;max-width: 200px;font-weight: bold;">ĐẶT HÀNG NGAY</a>
+            </div>
             <div class="offcanvas-backdrop fade overlay" style="display: none;background-color: #f0f8ffd4;"></div>
             <div class="offcanvas offcanvas-end text-bg-dark sidebar" tabindex="-1" aria-labelledby="sidebarLabel" style="width: 250px;font-size: small;">
                 <div class="offcanvas-header"><button class="btn close-btn text-white close_btn" id="close_btn" type="button">X</button></div>
@@ -86,7 +88,9 @@
                         <li class="nav-item"><a class="nav-link text-white left" href="#">KẾ HOẠCH DỊCH VỤ</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="specifications.html">THÔNG SỐ KỸ THUẬT</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="help_center.html">Câu hỏi thường gặp</a></li>
-                        <li class="nav-item" style="display: flex;justify-content: center;align-items: center;"><button class="btn" type="button" style="border: 1px solid white;background-color: white;color: black;font-weight: bolder;font-size: small;"> ORDER NOW </button></li>
+                        <li class="nav-item">
+                            <a href="{% url 'order' product_code='DNQT002' %}" class="btn btn-light" style="font-weight: bolder;font-size: small;">ORDER NOW</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -316,7 +320,11 @@
                     <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12" style="margin-top: 10px;"><label class="form-label" for="email-2">Địa chỉ dịch vụ</label>
                         <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);"><input class="form-control" type="text" id="email-2" name="text" placeholder="TYPE AND SELECT" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;"><button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url('{% static 'img/circular-target-shooting-interface-symbol.png' %}');background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button></div>
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;font-weight: 700;">Đặt hàng ngay</button></div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'order' product_code='DNQT003' %}" class="btn btn-light" style="height: auto;margin-top: 10px;width: auto;font-weight: 700;">Đặt hàng ngay</a>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

@@ -53,7 +53,14 @@
         </nav>
         <div class="main">
             <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);/*font-weight: 600;*/margin-bottom: 0rem;padding-top: 10%;"><strong>STARLINK CHO HỘ GIA ĐÌNH</strong></p>
-            <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 3vw, 23px);height: auto;font-weight: 600;margin-bottom: auto;"><strong>Internet tốc độ cao đáng tin cậy, dù bạn sống ở đâu.</strong><br><strong>Giá bắt đầu từ 80 USD/tháng, với chi phí thiết bị là 349 USD.</strong></p>
+            <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 3vw, 23px);height: auto;font-weight: 600;margin-bottom: auto;">
+                <strong>Internet tốc độ cao đáng tin cậy, dù bạn sống ở đâu.</strong><br>
+                {% for product in products %}
+                    {% if 'Khu dân cư nhỏ' in product.tensp %}
+                        <strong>Giá bắt đầu từ {{ product.gia|floatformat:0 }}Tr/tháng, với chi phí thiết bị là 349 USD.</strong>
+                    {% endif %}
+                {% endfor %}
+            </p>
             <div class="justify-content-center flex-row" style="display: flex;"></div>
         </div>
         <form class="d-flex justify-content-center flex-wrap align-items-end row" method="post" layber="">
@@ -61,7 +68,15 @@
                 <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12"><label class="form-label" for="email-1">Địa chỉ dịch vụ</label>
                     <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);"><input class="form-control" type="text" id="email-1" name="text" placeholder="LOẠI VÀ CHỌN" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;"><button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url('{% static 'img/circular-target-shooting-interface-symbol.png' %}');background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button></div>
                 </div>
-                <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;">ĐẶT HÀNG NGAY </button></div>
+                <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                    {% for product in products %}
+                        {% if 'Khu dân cư nhỏ' in product.tensp %}
+                            <div class="d-flex justify-content-center align-items-center">
+                                <a href="{% url 'order' product_code='KDC001' %}" class="btn btn-light" style="height: auto;margin-top: 10px;width: auto;">ĐẶT HÀNG NGAY</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div><a class="text-center" href="map.html" style="white-space: nowrap;"><br>XEM BẢN ĐỒ SẴN CÓ &amp; TỐC ĐỘLINK<i class="fas fa-chevron-right" style="margin-left: 1%;"></i></a>
         </form>
         <div class="offcanvas-backdrop fade overlay" style="display: none;background-color: #f0f8ffd4;"></div>
@@ -89,7 +104,15 @@
                     <li class="nav-item"><a class="nav-link text-white left" href="#" style="font-weight: 700;">Kế hoạch dịch vụ</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="{% url 'specifications' %}" style="font-weight: 700;">THÔNG SỐ KỸ THUẬT</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="{% url 'help_center' %}" style="font-weight: 700;">Câu hỏi thường gặp</a></li>
-                    <li class="nav-item" style="display: flex;justify-content: center;align-items: center;"><button class="btn" type="button" style="border: 1px solid white;background-color: white;color: black;font-weight: bolder;font-size: small;"> ĐẶT HÀNG NGAY </button></li>
+                    <li class="nav-item" style="display: flex;justify-content: center;align-items: center;">
+                        {% for product in products %}
+                            {% if 'Khu dân cư nhỏ' in product.tensp %}
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <a href="{% url 'order' product_code='KDC002' %}" class="btn btn-light" style="height: auto;margin-top: 10px;width: auto;font-weight: 700;">ĐẶT HÀNG NGAY</a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -267,6 +290,26 @@
                 <div style="height: 100%;text-align: center;"><a class="btn btn-lg col-xl-5" role="button" href="map.html" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Xem Bản đồ sẵn có &amp; tốc độ<i class="fas fa-angle-right" style="margin-left: 10px;"></i></a></div>
             </div>
         </section>
+    </div>
+    <div class="text-start" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+        <h1>Bộ thiết bị Starlink</h1>
+        <div class="row">
+            {% for product in products %}
+                {% if product.msp|slice:":3" == "KIT" %}
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white">
+                        <img src="{% static 'img/'|add:product.msp|add:'_img.png' %}" class="card-img-top" alt="{{ product.tensp }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.tensp }}</h5>
+                            <p class="card-text">{{ product.mota|truncatewords:30 }}</p>
+                            <p class="card-text"><strong>Giá: {{ product.gia|floatformat:0 }} VNĐ</strong></p>
+                            <a href="{% url 'order' product_code=product.msp %}" class="btn btn-light">Đặt hàng ngay</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
     <footer class="text-white" style="background-color: black;padding-top: 5%;">
         <div class="container">

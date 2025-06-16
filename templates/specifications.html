@@ -44,7 +44,6 @@
                     </ul>
                     <div class="d-flex align-items-center"><a class="text-white text-decoration-none text-uppercase" href="{% url 'index' %}" style="white-space: nowrap;margin-right: 1%;">Cá nhân&nbsp;</a><span style="margin: 0 3px;color: white;">|</span><a class="text-white text-decoration-none text-uppercase" href="{% url 'business' %}" style="margin-left: 1%;white-space: nowrap;">DOANH NGHIỆP</a></div>
                 </div><button class="btn menuToggle" id="menuToggle-1" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="width: 30px;height: 40px;color: white;">
-
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C3 4.44772 3.44772 4 4 4H16C16.5523 4 17 4.44772 17 5C17 5.55228 16.5523 6 16 6H4C3.44772 6 3 5.55228 3 5Z" fill="currentColor"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10C3 9.44772 3.44772 9 4 9H16C16.5523 9 17 9.44772 17 10C17 10.5523 16.5523 11 16 11H4C3.44772 11 3 10.5523 3 10Z" fill="currentColor"></path>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 15C3 14.4477 3.44772 14 4 14H16C16.5523 14 17 14.4477 17 15C17 15.5523 16.5523 16 16 16H4C3.44772 16 3 15.5523 3 15Z" fill="currentColor"></path>
@@ -71,7 +70,32 @@
         </div>
     </section>
     <div class="justify-content-center align-items-center d-flex flex-column text-white" style="background-color: black;padding: 0 15%;">
-        <div class="d-flex flex-row justify-content-center flex-wrap text-white" style="width: 100%;"><span style="padding: 1%;font-size: larger;">Mini</span><span style="padding: 1%;font-size: larger;"><span style="text-decoration: underline;">Standard</span></span><span style="padding: 1%;font-size: larger;">Standard Actuated</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">High Performance</span><span style="padding: 1%;font-size: larger;">Enterprise</span></div>
+        <div class="d-flex flex-row justify-content-center flex-wrap text-white" style="width: 100%;">
+            {% for product in products %}
+            <a href="#{{ product.msp }}" class="text-white text-decoration-none">
+                <span style="padding: 1%;font-size: larger;">{{ product.tensp }}</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        {% for product in products %}
+        <div id="{{ product.msp }}" class="product-section w-100 mb-5">
+            <div class="justify-content-center align-items-center d-flex">
+                <img src="{% static 'img/'|add:product.msp|add:'_img.png' %}" alt="{{ product.tensp }}">
+            </div>
+            <h1 class="text-white">{{ product.tensp }}</h1>
+            <div class="text-start" style="border-bottom: 1px solid #808080;border-top: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                <h1>Thông tin sản phẩm</h1>
+                <p>{{ product.mota|linebreaks }}</p>
+            </div>
+            <div class="text-start" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                <h1>Giá sản phẩm</h1>
+                <p class="price">{{ product.gia|floatformat:0 }} VNĐ</p>
+                <a href="{% url 'order' product_code=product.msp %}" class="btn btn-light">Đặt hàng ngay</a>
+            </div>
+        </div>
+        {% endfor %}
+
         <div class="justify-content-center align-items-center d-flex"><img src="{% static 'img/Starlink_Standard_Hero_500x500.png' %}"></div>
         <h1 class="text-white">Tiêu chuẩn</h1>
         <div class="text-start" style="border-bottom: 1px solid #808080;border-top: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">

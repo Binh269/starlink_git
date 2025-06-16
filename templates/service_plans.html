@@ -73,41 +73,41 @@
                         <h6 class="text-uppercase text-center">TÍNH NĂNG CHÍNH</h6>
                         <p class="text-uppercase text-center text-white" style="font-size: larger;padding: 0;font-weight: 600;">Dữ liệu không giới hạn<br>VỊ TRÍ CỐ ĐỊNH</p>
                         <h6 class="text-uppercase text-center">Gói dịch vụ hàng tháng</h6>
-                        <div class="d-flex flex-row flex-nowrap justify-content-between align-items-center text-white align-content-stretch" style="border-bottom: 1px solid rgba(255,255,255,0.5);padding: 5% 0 3%;">
-                            <h5>KHU dân cư nhỏ</h5>
-                            <h5>3,5Tr/Tháng</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'order' product_code='KDC001' %}" class="btn btn-light" style="font-weight: bolder;font-size: small;">ĐẶT HÀNG NGAY</a>
                         </div>
-                        <div class="d-flex flex-row flex-nowrap justify-content-between align-items-center text-white align-content-stretch" style="border-bottom: 1px solid rgba(255,255,255,0.42);padding: 5% 0 3%;">
-                            <h5>KHU dân cư&nbsp;</h5>
-                            <h5>15Tr/Tháng</h5>
-                        </div>
-                        <p style="font-size: x-small;padding: 5%;">Người dùng gói Residential Lite sẽ được ưu tiên sau gói Residential và sẽ trải nghiệm tốc độ chậm hơn vào giờ cao điểm. Gói Residential Lite không có sẵn ở tất cả các khu vực. Xem khu vực hỗ trợ tại đây.</p>
                     </div>
-                    <div class="col-md-6 col-lg-5 offset-lg-1" style="border: 1px solid rgba(255,255,255,0.31);border-radius: 10px;">
-                        <h1 class="text-uppercase text-center text-white">CHuyển vùng</h1>
-                        <p class="text-uppercase text-center" style="font-size: x-small;font-weight: 400;">Phù hợp nhất cho xe RV, người du mục, người cắm trại và làm việc khi di chuyển</p>
+                    <div class="col-md-6 col-lg-5" style="border: 1px solid rgba(255,255,255,0.31);border-radius: 10px;">
+                        <h1 class="text-uppercase text-center text-white">CHUYỂN VÙNG</h1>
+                        <p class="text-uppercase text-center" style="font-size: x-small;font-weight: 400;">Phù hợp nhất cho các ứng dụng di động</p>
                         <h6 class="text-uppercase text-center">TÍNH NĂNG CHÍNH</h6>
-                        <p class="text-uppercase text-center text-white" style="font-size: larger;padding: 0;font-weight: 600;"><strong>Phủ sóng toàn quốc</strong><br><strong>Sử dụng khi đang di chuyển</strong><br><strong>Du lịch quốc tế</strong><br><strong>Phủ sóng ven biển</strong><br><strong>Tạm dừng dịch vụ</strong></p>
+                        <p class="text-uppercase text-center text-white" style="font-size: larger;padding: 0;font-weight: 600;">Dữ liệu không giới hạn<br>DI ĐỘNG TRÊN ĐẤT LIỀN</p>
                         <h6 class="text-uppercase text-center">Gói dịch vụ hàng tháng</h6>
-                        <div class="d-flex flex-row flex-nowrap justify-content-between align-items-center text-white align-content-stretch" style="border-bottom: 1px solid rgba(255,255,255,0.5);padding: 5% 0 3%;">
-                            <h5>Chuyển vùng -50GB</h5>
-                            <h5>3,5Tr/Tháng</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'order' product_code='CV001' %}" class="btn btn-light" style="font-weight: bolder;font-size: small;">ĐẶT HÀNG NGAY</a>
                         </div>
-                        <div class="d-flex flex-row flex-nowrap justify-content-between align-items-center text-white align-content-stretch" style="border-bottom: 1px solid rgba(255,255,255,0.42);padding: 5% 0 3%;">
-                            <h5>Chuyển vùng - Không giới hạn</h5>
-                            <h5>15Tr/Tháng</h5>
-                        </div>
-                        <p style="font-size: x-small;padding: 5%;">Người dùng gói Roam 50 GB bị giới hạn dung lượng 50 GB và có thể trả thêm theo GB nếu muốn dùng thêm dữ liệu. Để biết giới hạn về du lịch quốc tế, phủ sóng ven biển và sử dụng khi đang di chuyển, vui lòng xem phần Câu hỏi thường gặp tại đây.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-5 offset-lg-1 offset-xxl-1">
-                        <div class="d-flex justify-content-center" style="padding: 5%;"><a href="{% url 'order' %}"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;max-width: 200px;font-weight: 700;">Đặt hàng ngay</button></a></div>
+            </div>
+        </div>
+        <div class="text-start" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+            <h1>Bộ thiết bị Starlink</h1>
+            <div class="row">
+                {% for product in products %}
+                    {% if product.msp|slice:":3" == "KIT" %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark text-white">
+                            <img src="{% static 'img/'|add:product.msp|add:'_img.png' %}" class="card-img-top" alt="{{ product.tensp }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.tensp }}</h5>
+                                <p class="card-text">{{ product.mota|truncatewords:30 }}</p>
+                                <p class="card-text"><strong>Giá: {{ product.gia|floatformat:0 }} VNĐ</strong></p>
+                                <a href="{% url 'order' product_code=product.msp %}" class="btn btn-light">Đặt hàng ngay</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-lg-5 offset-lg-1">
-                        <div class="d-flex justify-content-center" style="padding: 5%;"><a href="{% url 'order' %}"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;max-width: 200px;font-weight: 700;">Đặt hàng ngay</button></a></div>
-                    </div>
-                </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </section>

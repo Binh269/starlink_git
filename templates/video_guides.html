@@ -35,9 +35,9 @@
 
 <body>
     <section class="py-4 py-xl-5" style="/*background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('assets/img/home_a_hero_d.jpg') no-repeat center center /cover;*/min-height: 500px;background-color: black;">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="padding: clamp(20px,1vw,50px) clamp(24px, 4vw, 60px);background-color: #171717;">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="padding: clamp(20px,1vw,50px) clamp(24px, 4vw, 60px);background-color: #171717;">
             <div class="container-fluid" style="justify-content: space-between;"><a class="navbar-brand fw-bold" href="{% url 'index' %}" style="max-width: 180px;"><img src="{% static 'img/logo_white.png' %}" style="max-width: 180px;" width="180" height="30"></a>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav" style="margin: 0 4% 0 5%;text-align: center;">
+                <div class="collapse navbar-collapse justify-content-between font-weight-bold" id="navbarNav" style="margin: 0 4% 0 5%;text-align: center; font-weight: bold;">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-white left text-uppercase" href="{% url 'residential' %}">Khu dân cư</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{% url 'roam' %}">CHUYỂN VÙNG</a></li>
@@ -58,11 +58,11 @@
                 <div class="d-flex flex-column text-uppercase" style="font-weight: bold;"><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="#">VN</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'sign_in' %}">Đăng nhập</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'help_center' %}">Trung tâm trợ giúp</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'map' %}">Bản đồ vùng phủ sóng</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'specifications' %}">Thông số kỹ thuật</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'service_plans' %}">Gói dịch vụ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'video_guides' %}">Video hướng dẫn</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'technology' %}">Công nghệ</a><a class="py-2 text-decoration-none text-white border-bottom border-secondary" href="{% url 'update' %}">Cập nhật</a></div>
             </div>
         </div>
-        <h1 class="text-uppercase text-center text-white" style="padding: 10% 0 0;font-weight: 700;">Video HƯỚNG DẪN</h1>
+        <h1 class="text-uppercase text-center text-white" style="padding: 7% 0 0;font-weight: 700;">Video HƯỚNG DẪN</h1>
         <p class="text-center text-white" style="font-size: larger;">Xem các video để tìm hiểu thêm về Starlink của bạn.</p>
-        <div class="main text-white d-flex flex-row" style="padding-top: 12%;">
+        <div class="main text-white d-flex flex-row " style="padding-top: 5%;">
             <div class="row" style="width: 100%;padding: 0 5%;">
-                <div class="col-md-6 col-lg-7 col-xl-6 col-xxl-6 offset-xl-1 offset-xxl-0"><iframe allowfullscreen="" frameborder="0" width="560" height="315" style="width: auto;" src="{% static 'video/Starlink_Standard_Install_Video.mp4'%}" type="video/mp4"></iframe>
+                <div class="col-md-6 col-lg-7 col-xl-6 col-xxl-6 offset-xl-1 offset-xxl-0"><iframe allowfullscreen="" frameborder="0"  style="width: 100%;height: 100%;" src="{% static 'video/Starlink_Standard_Install_Video.mp4'%}" type="video/mp4"></iframe>
                     <div class="starlink-video-info">
                         <h3>Lắp đặt cố định cho bản tiêu chuẩn</h3>
                         <p><span style="text-decoration: underline;">Tìm hiểu cách lắp đặt Starlink để có hiệu suất tốt nhất. Truy cập trang hỗ trợ để tìm hiểu thêm.</span></p>

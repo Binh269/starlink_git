@@ -101,44 +101,33 @@
                 </div>
             </div>
             <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 d-xl-flex text-white">
-                <div class="col-xl-3">
-                    <div class="card mb-4" style="height: 100%;">
-                        <div class="card-body text-center p-3 gap-3 text-white" style="background-color: black;">
-                            <h4 class="fw-bold card-subtitle text-uppercase">Gói Doanh Nghiệp 20GB</h4>
-                            <h4 class="display-5 fw-bold card-title">80 Triệu<span style="font-size: small;">/Tháng</span></h4>
-                            <p>Dữ liệu hàng không doanh nghiệp toàn cầu 20GB</p>
+                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="card text-white" style="background-color: #262626;border-radius: 20px;border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="card-body">
+                            <h3 class="text-uppercase">Doanh nghiệp hàng không</h3>
+                            {% for product in products %}
+                                {% if 'Doanh nghiệp hàng không - Tiêu chuẩn' in product.tensp %}
+                                    <h4 class="display-5 fw-bold card-title">{{ product.gia|floatformat:0 }} Triệu<span style="font-size: small;">/Tháng</span></h4>
+                                {% endif %}
+                            {% endfor %}
+                            <p>Tốc độ cao và độ trễ thấp cho các chuyến bay thương mại</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="card mb-4" style="height: 100%;background-color: black;">
-                        <div class="card-body text-center p-3 gap-3 text-white">
-                            <h4 class="fw-bold card-subtitle text-uppercase">Doanh Nghiệp<br>Không giới hạn</h4>
-                            <h4 class="display-5 fw-bold card-title">50 Triệu<span style="font-size: small;">/Tháng</span></h4>
-                            <p>Dữ liệu hàng không doanh nghiệp toàn cầu không giới hạn</p>
-                            <p></p>
+                <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="card text-white" style="background-color: #262626;border-radius: 20px;border: 1px solid rgba(255,255,255,0.3);">
+                        <div class="card-body">
+                            <h3 class="text-uppercase">Doanh nghiệp hàng không - Cao cấp</h3>
+                            {% for product in products %}
+                                {% if 'Doanh nghiệp hàng không - Cao cấp' in product.tensp %}
+                                    <h4 class="display-5 fw-bold card-title">{{ product.gia|floatformat:0 }} Triệu<span style="font-size: small;">/Tháng</span></h4>
+                                {% endif %}
+                            {% endfor %}
+                            <p>Tốc độ cao và độ trễ thấp cho các chuyến bay thương mại cao cấp</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3">
-                    <div class="card mb-4" style="height: 100%;background-color: black;">
-                        <div class="card-body text-center p-3 gap-3 text-white">
-                            <h4 class="fw-bold card-subtitle text-uppercase">Chính phủ<br>Không giới hạn</h4>
-                            <p style="font-weight: 800;padding-top: 5%;"><strong>Liên hệ với chúng tôi để biết chi tiết và giá cả</strong></p>
-                            <p>Các khả năng nâng cao hỗ trợ một loạt các máy bay của Chính phủ và các nhiệm vụ đặc biệt</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3">
-                    <div class="card mb-4" style="height: 100%;background-color: black;">
-                        <div class="card-body text-center p-3 gap-3 text-white">
-                            <h4 class="fw-bold card-subtitle text-uppercase">Thương mại<br>Không giới hạn</h4>
-                            <p style="font-weight: 800;padding-top: 5%;"><strong>Liên hệ với chúng tôi để biết chi tiết và giá cả</strong></p>
-                            <p>Tăng cường tốc độ hỗ trợ phát trực tuyến cho mọi hành khách</p>
-                            <p style="font-weight: 100;font-size: smaller;">Bao gồm máy bay BBJ / ACJ</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
         <div class="d-flex justify-content-center" style="padding-bottom: 10%;"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;width: auto;max-width: 200px;font-size: smaller;font-weight: bold;">LIÊN HỆ VỚI CHÚNG TÔI</button></div>
@@ -292,11 +281,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js&quot; integrity=&quot;sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer"></script>
     <script src="{% static 'assets/js/map.js' %}"></script>
     <script src="{% static 'assets/js/order.js' %}"></script>
+    <script src="{% static 'assets/js/hearder.js' %}"></script>
 </body>
 
 </html>
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'js/hearder.js' %}"></script>
 {% endblock %}

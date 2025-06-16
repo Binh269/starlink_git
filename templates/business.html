@@ -61,8 +61,16 @@
             </nav>
             <div class="main">
                 <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);/*font-weight: 600;*/margin-bottom: 0rem;"><br><strong>STARLINK CHO DOANH NGHIỆP</strong></p>
-                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;"><strong>Internet tốc độ cao đáng tin cậy cho các doanh nghiệp.</strong></p>
-                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;"><strong>Bắt đầu từ 80Triệu/tháng với chi phí phần cứng là 20Triệu.</strong></p>
+                <p class="text-uppercase text-center text-white" style="width: auto;font-size: clamp(8px, 3vw, 23px);height: auto;font-weight: 600;margin-bottom: auto;">
+                    <strong>Internet tốc độ cao đáng tin cậy cho các doanh nghiệp.</strong>
+                </p>
+                <p class="text-uppercase text-center text-white" style="width: auto;font-size: clamp(8px, 3vw, 23px);height: auto;font-weight: 600;margin-bottom: auto;">
+                    {% for product in products %}
+                        {% if 'Doanh nghiệp địa phương - 1TB' in product.tensp %}
+                            <strong>Bắt đầu từ {{ product.gia|floatformat:0 }}Triệu/tháng với chi phí phần cứng là 20Triệu.</strong>
+                        {% endif %}
+                    {% endfor %}
+                </p>
                 <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2.5vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;padding: 5% 20%;"><span style="text-decoration: underline;">Liên hệ với đội ngũ của chúng tôi</span> hoặc <span style="text-decoration: underline;">xem hướng dẫn mua hàng</span>.</p>
             </div>
             <form class="d-flex justify-content-center flex-wrap align-items-end row" method="post" layber="">
@@ -70,7 +78,11 @@
                     <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12"><label class="form-label" for="email-1">Địa chỉ dịch vụ</label>
                         <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);"><input class="form-control" type="text" id="email-1" name="text" placeholder="NHẬP VÀ CHỌN" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;"><button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url('{% static 'img/circular-target-shooting-interface-symbol.png' %}');background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button></div>
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;">ĐẶT HÀNG NGAY </button></div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'order' product_code='DNL001' %}" class="btn btn-light" style="height: auto;max-width: 200px;font-weight: 700;">Đặt hàng ngay</a>
+                        </div>
+                    </div>
                 </div><a class="text-center" href="map.html" style="white-space: nowrap;"><br><span style="background-color: initial;">XEM BẢN ĐỒ TÍNH KHẢ DỤNG &amp; TỐC ĐỘ</span><i class="fas fa-chevron-right" style="margin-left: 1%;"></i></a>
             </form>
             <div class="offcanvas-backdrop fade overlay" style="display: none;background-color: #f0f8ffd4;"></div>
@@ -112,7 +124,7 @@
                     <div class="row fixed_site" style="padding-top: 7%;background: url('{% static 'img/roam_b_feature2_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                         <div class="col-sm-11 col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                             <div>
-                                <h3 class="text-uppercase fw-bold" href="#" style="white-space: nowrap;">TRẠM CỐ ĐỊNH</h3>
+                                <h3 class="text-uppercase fw-bold" href="{% url 'business_fixed_site' %}" style="white-space: nowrap;">TRẠM CỐ ĐỊNH</h3>
                                 <p class="my-3">Kết nối cho doanh nghiệp</p>
                             </div>
                         </div>
@@ -122,7 +134,7 @@
                     <div class="row mobility" style="padding-top: 7%;background: url('{% static 'img/business_home_a_landmobility_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                         <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                             <div>
-                                <h3 class="text-uppercase fw-bold" href="#" style="white-space: nowrap;">Di động trên đất liền</h3>
+                                <h3 class="text-uppercase fw-bold" href="{% url 'business_mobility' %}" style="white-space: nowrap;">Di động trên đất liền</h3>
                                 <p class="my-3">Kết nối di động trên đất liền</p>
                             </div>
                         </div>
@@ -134,7 +146,7 @@
                     <div class="row maritime" style="padding-top: 7%;background: url('{% static 'img/business_home_a_maritime_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                         <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                             <div>
-                                <h1 class="text-uppercase fw-bold" href="#">Hàng hải</h1>
+                                <h1 class="text-uppercase fw-bold" href="{% url 'business_maritime' %}">Hàng hải</h1>
                                 <p class="my-3">Kết nối trên biển</p>
                             </div>
                         </div>
@@ -144,7 +156,7 @@
                     <div class="row direct_to_cell" style="padding-top: 7%;background: url('{% static 'img/Aviation_hero_d2.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                         <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                             <div>
-                                <h1 class="text-uppercase fw-bold" href="#">Hàng không</h1>
+                                <h1 class="text-uppercase fw-bold" href="{% url 'business_aviation' %}">Hàng không</h1>
                                 <p class="my-3">Kết nối trong khi ở trên không</p>
                             </div>
                         </div>
@@ -215,7 +227,11 @@
                     <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12" style="margin-top: 10px;"><label class="form-label" for="email-2">Địa chỉ dịch vụ</label>
                         <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);"><input class="form-control" type="text" id="email-2" name="text" placeholder="TYPE AND SELECT" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;"><button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url('{% static 'assets/img/circular-target-shooting-interface-symbol.png' %}');background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button></div>
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column"><button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;font-weight: 700;">Đặt hàng ngay</button></div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="{% url 'order' product_code='DNQT001' %}" class="btn btn-light" style="font-weight: bolder;font-size: small;">ĐẶT HÀNG NGAY</a>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -248,11 +264,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js&quot; integrity=&quot;sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer"></script>
     <script src="{% static 'assets/js/map.js' %}"></script>
     <script src="{% static 'assets/js/order.js' %}"></script>
+    <script src="{% static 'assets/js/hearder.js' %}"></script>
+
 </body>
 
 </html>
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'js/hearder.js' %}"></script>
 {% endblock %}

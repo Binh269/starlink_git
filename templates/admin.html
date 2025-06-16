@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h2>Quản lý sản phẩm</h2>
+        </div>
+        <div class="col text-end">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                <i class="fas fa-plus"></i> Thêm sản phẩm
+            </button>
+        </div>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm theo mã hoặc tên sản phẩm...">
+        </div>
+        <div class="col-md-3">
+            <select id="priceFilter" class="form-select">
+                <option value="">Lọc theo giá</option>
+                <option value="0-5000000">0 - 5 triệu</option>
+                <option value="5000000-20000000">5 - 20 triệu</option>
+                <option value="20000000-50000000">20 - 50 triệu</option>
+                <option value="50000000+">Trên 50 triệu</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá (VNĐ)</th>
+                    <th>Mô tả</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product.msp }}</td>
+                    <td>{{ product.tensp }}</td>
+                    <td>{{ product.gia|floatformat:0 }}</td>
+                    <td>{{ product.mota|truncatechars:100 }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning edit-btn" data-id="{{ product.msp }}" data-bs-toggle="modal" data-bs-target="#editProductModal">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger delete-btn" data-id="{{ product.msp }}" data-bs-toggle="modal" data-bs-target="#deleteProductModal">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div class="modal fade" id="addProductModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thêm sản phẩm mới</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="addProductForm" method="POST" action="{% url 'admin_add_product' %}">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="msp" class="form-label">Mã sản phẩm</label>
+                            <input type="text" class="form-control" id="msp" name="msp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tensp" class="form-label">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="tensp" name="tensp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gia" class="form-label">Giá (VNĐ)</label>
+                            <input type="number" class="form-control" id="gia" name="gia" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mota" class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="mota" name="mota" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chỉnh sửa sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="editProductForm" method="POST" action="{% url 'admin_edit_product' %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="edit_msp" name="msp">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="edit_tensp" class="form-label">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="edit_tensp" name="tensp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_gia" class="form-label">Giá (VNĐ)</label>
+                            <input type="number" class="form-control" id="edit_gia" name="gia" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit_mota" class="form-label">Mô tả</label>
+                            <textarea class="form-control" id="edit_mota" name="mota" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product Modal -->
+    <div class="modal fade" id="deleteProductModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="deleteProductForm" method="POST" action="{% url 'admin_delete_product' %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="delete_msp" name="msp">
+                    <div class="modal-body">
+                        <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-danger">Xóa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Add Custom JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keyup', function() {
+        const searchText = this.value.toLowerCase();
+        const rows = document.querySelectorAll('tbody tr');
+        
+        rows.forEach(row => {
+            const msp = row.cells[0].textContent.toLowerCase();
+            const tensp = row.cells[1].textContent.toLowerCase();
+            
+            if (msp.includes(searchText) || tensp.includes(searchText)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // Price filter functionality
+    const priceFilter = document.getElementById('priceFilter');
+    priceFilter.addEventListener('change', function() {
+        const [min, max] = this.value.split('-').map(val => val === '+' ? Infinity : Number(val));
+        const rows = document.querySelectorAll('tbody tr');
+        
+        rows.forEach(row => {
+            const price = Number(row.cells[2].textContent.replace(/[^0-9.-]+/g,""));
+            if (price >= min && (max === Infinity || price <= max)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // Edit button functionality
+    const editButtons = document.querySelectorAll('.edit-btn');
+    editButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const msp = this.dataset.id;
+            const row = this.closest('tr');
+            
+            document.getElementById('edit_msp').value = msp;
+            document.getElementById('edit_tensp').value = row.cells[1].textContent;
+            document.getElementById('edit_gia').value = row.cells[2].textContent.replace(/[^0-9.-]+/g,"");
+            document.getElementById('edit_mota').value = row.cells[3].textContent;
+        });
+    });
+
+    // Delete button functionality
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const msp = this.dataset.id;
+            document.getElementById('delete_msp').value = msp;
+        });
+    });
+});
+</script>
+{% endblock %} 
