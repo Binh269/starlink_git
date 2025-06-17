@@ -108,7 +108,24 @@
                         <h4 class="fw-bold" id="total_price">0đ</h4>
                     </div>
 
-                    <button class="btn btn-light w-100 fw-bold py-3" type="button">
+                    <!-- Customer Information Form -->
+                    <div class="mb-4">
+                        <h4 class="fw-bold mb-3">Thông tin khách hàng</h4>
+                        <div class="mb-3">
+                            <label for="customer_name" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="customer_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customer_phone" class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" id="customer_phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customer_notes" class="form-label">Ghi chú</label>
+                            <textarea class="form-control" id="customer_notes" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <button id="paymentButton" class="btn btn-light w-100 fw-bold py-3" type="button" disabled>
                         Thanh toán
                     </button>
                 </div>
@@ -118,6 +135,8 @@
 </div>
 
 <script>
+    const fbMessengerLink = `https://m.me/your_page_id?ref=${encodeURIComponent(message)}`;
+
 function formatPrice(price) {
     return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
 }
@@ -139,9 +158,96 @@ function updateTotal() {
     document.getElementById('total_price').textContent = formatPrice(total);
 }
 
-// Initialize total on page load
+// Validate form and enable/disable payment button
+function validateForm() {
+    const name = document.getElementById('customer_name').value.trim();
+    const phone = document.getElementById('customer_phone').value.trim();
+    const paymentButton = document.getElementById('paymentButton');
+    
+    if (name && phone) {
+        paymentButton.disabled = false;
+    } else {
+        paymentButton.disabled = true;
+    }
+}
+
+// Send order to Facebook Messenger
+function sendToMessenger() {
+    const name = document.getElementById('customer_name').value.trim();
+    const phone = document.getElementById('customer_phone').value.trim();
+    const notes = document.getElementById('customer_notes').value.trim();
+    const total = document.getElementById('total_price').textContent;
+    const selectedKit = document.getElementById('kit_select').options[document.getElementById('kit_select').selectedIndex].text;
+    
+    // Get selected accessories
+    let accessories = [];
+    document.querySelectorAll('.form-check-input:checked').forEach(checkbox => {
+        accessories.push(checkbox.parentElement.textContent.trim());
+    });
+
+    // Prepare order data
+    const orderData = {
+        customer_name: name,
+        phone: phone,
+        product: selectedKit,
+        accessories: accessories.join(', ') || 'Không có',
+        total: total,
+        notes: notes || 'Không có'
+    };
+
+    // Send to server
+    fetch('/process-order/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken')
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            alert('Đơn hàng đã được gửi thành công!');
+        } else {
+            alert('Có lỗi xảy ra khi gửi đơn hàng. Vui lòng thử lại sau.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Có lỗi xảy ra khi gửi đơn hàng. Vui lòng thử lại sau.');
+    });
+}
+
+// Get CSRF token from cookies
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+// Add event listeners
 document.addEventListener('DOMContentLoaded', function() {
     updateTotal();
+    
+    // Add input event listeners for form validation
+    document.getElementById('customer_name').addEventListener('input', validateForm);
+    document.getElementById('customer_phone').addEventListener('input', validateForm);
+    
+    // Add click event listener for payment button
+    document.getElementById('paymentButton').addEventListener('click', function() {
+        if (!this.disabled) {
+            sendToMessenger();
+        }
+    });
 });
 </script>
 {% endblock %}

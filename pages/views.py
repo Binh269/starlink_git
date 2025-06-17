@@ -5,6 +5,11 @@ from django.urls import reverse
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import user_passes_test
 from django.urls import reverse
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+import requests
+from django.conf import settings
 
 # Create your views here.
 
@@ -147,3 +152,60 @@ def admin_delete_product(request):
         return redirect('admin_products')
     
     return redirect('admin_products')
+
+def send_to_messenger(order_data):
+    """
+    Gửi thông tin đơn hàng đến Facebook Messenger
+    """
+    message = f"""🛒 ĐƠN HÀNG MỚI
+👤 Khách hàng: {order_data.get('customer_name')}
+📱 Số điện thoại: {order_data.get('phone')}
+🛍️ Sản phẩm: {order_data.get('product')}
+🔧 Phụ kiện: {order_data.get('accessories', 'Không có')}
+💰 Tổng tiền: {order_data.get('total')}
+📝 Ghi chú: {order_data.get('notes', 'Không có')}"""
+
+    url = f"https://graph.facebook.com/v20.0/me/messages?access_token={settings.FB_PAGE_ACCESS_TOKEN}"
+    
+    # ID của page admin hoặc người quản lý page
+    recipient_id = "YOUR_ADMIN_ID"  # Thay thế bằng ID của bạn
+    
+    payload = {
+        'recipient': {'id': recipient_id},
+        'message': {'text': message}
+    }
+    
+    headers = {'Content-Type': 'application/json'}
+    
+    try:
+        response = requests.post(url, json=payload, headers=headers)
+        if response.status_code == 200:
+            print(f"Message sent successfully: {message}")
+            return True
+        else:
+            print(f"Failed to send message: {response.text}")
+            return False
+    except Exception as e:
+        print(f"Error sending message: {str(e)}")
+        return False
+
+@csrf_exempt
+def process_order(request):
+    """
+    Xử lý đơn hàng và gửi thông tin đến Facebook
+    """
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            # Gửi thông tin đơn hàng đến Facebook
+            success = send_to_messenger(data)
+            if success:
+                return HttpResponse(json.dumps({'status': 'success'}), content_type='application/json')
+            else:
+                return HttpResponse(json.dumps({'status': 'error', 'message': 'Failed to send to Facebook'}), 
+                                 content_type='application/json', status=500)
+        except Exception as e:
+            return HttpResponse(json.dumps({'status': 'error', 'message': str(e)}), 
+                             content_type='application/json', status=500)
+    
+    return HttpResponse('Method not allowed', status=405)

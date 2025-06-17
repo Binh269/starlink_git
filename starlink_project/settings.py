@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -130,3 +131,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Facebook configuration
+FB_PAGE_ACCESS_TOKEN = config('FB_PAGE_ACCESS_TOKEN', default='your_page_access_token')
+FB_VERIFY_TOKEN = config('FB_VERIFY_TOKEN', default='your_verify_token')
+FB_APP_SECRET = config('FB_APP_SECRET', default='EAAKo2mGekqEBO2p5cUUnaH63ZAOOgX72N0C5qZC8P5sNZAkP6BqjbsHyF2ZAaXZAZBPDwziNw1sAjEozdXyL9LsiDzC9GLXGBoUJ2GBAN5IVtmaZBTnIYmg674Te8ufsNP9t7kZBm2eSg6ALiM0ejauLN0mG4ZA3PjkjHFtrk526ueoTNkInvqL0nQFxs3cBNxz3oSB4DRWABrC05JKrHGbzMaUrmZCQZDZD')
