@@ -27,6 +27,11 @@ urlpatterns = [
     path('manage/products/add/', views.admin_add_product, name='admin_add_product'),
     path('manage/products/edit/', views.admin_edit_product, name='admin_edit_product'),
     path('manage/products/delete/', views.admin_delete_product, name='admin_delete_product'),
-    path('admin/products/delete/<int:product_id>/', views.delete_product, name='delete_product'),
     path('process-order/', views.process_order, name='process_order'),
+    path('webhook/', views.webhook, name='webhook'),
+    path('test-facebook-connection/', views.test_facebook_connection, name='test_facebook_connection'),
+    path('simple-test-facebook/', views.simple_test_facebook, name='simple_test_facebook'),
+    path('check-facebook-info/', views.check_facebook_info, name='check_facebook_info'),
+    path('get-facebook-pages/', views.get_facebook_pages, name='get_facebook_pages'),
+    path('get-page-conversations/', views.get_page_conversations, name='get_page_conversations'),
 ] 

@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +31,7 @@ SECRET_KEY = 'django-insecure-#bt@-*hd4fx4*8lunna@x=&l*^x9$f%y0sb@8sunu%%ybrs_mc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['7299-2402-800-6d74-69cc-a057-ab54-9b56-ad45.ngrok-free.app']
 
 
 # Application definition
@@ -132,7 +137,35 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Facebook configuration
-FB_PAGE_ACCESS_TOKEN = config('FB_PAGE_ACCESS_TOKEN', default='your_page_access_token')
-FB_VERIFY_TOKEN = config('FB_VERIFY_TOKEN', default='your_verify_token')
-FB_APP_SECRET = config('FB_APP_SECRET', default='EAAKo2mGekqEBO2p5cUUnaH63ZAOOgX72N0C5qZC8P5sNZAkP6BqjbsHyF2ZAaXZAZBPDwziNw1sAjEozdXyL9LsiDzC9GLXGBoUJ2GBAN5IVtmaZBTnIYmg674Te8ufsNP9t7kZBm2eSg6ALiM0ejauLN0mG4ZA3PjkjHFtrk526ueoTNkInvqL0nQFxs3cBNxz3oSB4DRWABrC05JKrHGbzMaUrmZCQZDZD')
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'pages': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
+# Facebook Messenger settings
+FB_PAGE_ACCESS_TOKEN = 'EAAKo2mGekqEBO3BnP3IfWsYya9UoUZATSyBayq8CkxZCetnJIwdSPNBucOAKbWdJ3HkzzwkUcWeG02W80yMs3aRLpJ98BCEJngysvN2tZCLddZCZBf2geYovbZBoMbUdNvJwg0HXKDxplaVO75b7u7aKStxMRwUUxm1WT6NOLNUO6N7VZCXVYs2ZCyyilaOZANM5wc5DC9RaubvjT6qzqnyyZC8mm9DQZDZD'
+FB_VERIFY_TOKEN = 'bosspro269'
+FB_APP_SECRET = 'ba2e1302fe1621250009ce8a15c65918'
+FB_PAGE_ID = '620917551114465'  # ID của page của bạn
+FB_ADMIN_ID = '100000686899395'  # ID của admin nhận tin nhắn (thay đổi thành ID của bạn)
+
+
+
+

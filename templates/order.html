@@ -10,14 +10,128 @@
             
             <!-- Country Selection -->
             <div class="d-flex justify-content-center align-items-center mb-4">
-                <div class="dropdown w-100">
-                    <button id="list_tinh" class="btn dropdown-toggle w-100 text-white fw-bold" type="button">
-                        CHỌN QUỐC GIA
-                    </button>
-                    <div id="list-nd-tinh" class="dropdown-menu">
-                        <!-- Country list will be populated by JavaScript -->
-                    </div>
-                </div>
+                <select id="country_select" class="form-select w-100">
+                    <option value="" disabled selected>CHỌN QUỐC GIA</option>
+                    <option value="AX">Quần đảo Aland</option>
+                    <option value="AL">Albania</option>
+                    <option value="AS">Samoa thuộc Mỹ</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AM">Armenia</option>
+                    <option value="AU">Úc</option>
+                    <option value="AT">Áo</option>
+                    <option value="AZ">Azerbaijan</option>
+                    <option value="BS">Bahamas</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BD">Bangladesh</option>
+                    <option value="BB">Barbados</option>
+                    <option value="BE">Bỉ</option>
+                    <option value="BT">Bhutan</option>
+                    <option value="BR">Brazil</option>
+                    <option value="BG">Bulgaria</option>
+                    <option value="BI">Burundi</option>
+                    <option value="CA">Canada</option>
+                    <option value="CV">Cape Verde</option>
+                    <option value="CL">Chile</option>
+                    <option value="CX">Đảo Giáng Sinh</option>
+                    <option value="CC">Quần đảo Cocos</option>
+                    <option value="CO">Colombia</option>
+                    <option value="CK">Quần đảo Cook</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="HR">Croatia</option>
+                    <option value="CY">Síp</option>
+                    <option value="CZ">Cộng hòa Séc</option>
+                    <option value="DK">Đan Mạch</option>
+                    <option value="DO">Cộng hòa Dominica</option>
+                    <option value="TL">Đông Timor</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="SV">El Salvador</option>
+                    <option value="EE">Estonia</option>
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Phần Lan</option>
+                    <option value="FR">Pháp</option>
+                    <option value="GF">Guiana thuộc Pháp</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Đức</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GR">Hy Lạp</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GG">Guernsey</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Đảo Heard và Quần đảo McDonald</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IM">Đảo Man</option>
+                    <option value="IT">Ý</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Nhật Bản</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="XK">Kosovo</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LT">Litva</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MK">Macedonia</option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="MT">Malta</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia</option>
+                    <option value="MD">Moldova</option>
+                    <option value="MN">Mông Cổ</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NL">Hà Lan</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NE">Niger</option>
+                    <option value="NF">Đảo Norfolk</option>
+                    <option value="MP">Quần đảo Bắc Mariana</option>
+                    <option value="NO">Na Uy</option>
+                    <option value="PA">Panama</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PL">Ba Lan</option>
+                    <option value="PT">Bồ Đào Nha</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="RE">Reunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="BL">Saint Barthelemy</option>
+                    <option value="MF">Saint Martin</option>
+                    <option value="VC">Saint Vincent và Grenadines</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Quần đảo Solomon</option>
+                    <option value="SS">Nam Sudan</option>
+                    <option value="ES">Tây Ban Nha</option>
+                    <option value="SJ">Svalbard và Jan Mayen</option>
+                    <option value="SE">Thụy Điển</option>
+                    <option value="CH">Thụy Sĩ</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad và Tobago</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="VI">Quần đảo Virgin thuộc Mỹ</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="GB">Vương quốc Anh</option>
+                    <option value="US">Hoa Kỳ</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="YE">Yemen</option>
+                    <option value="VN">Việt Nam</option>
+                </select>
             </div>
 
             <!-- Product Image -->
@@ -117,7 +231,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="customer_phone" class="form-label">Số điện thoại</label>
-                            <input type="tel" class="form-control" id="customer_phone" required>
+                            <input type="number" class="form-control" id="customer_phone" required>
                         </div>
                         <div class="mb-3">
                             <label for="customer_notes" class="form-label">Ghi chú</label>
@@ -135,8 +249,6 @@
 </div>
 
 <script>
-    const fbMessengerLink = `https://m.me/your_page_id?ref=${encodeURIComponent(message)}`;
-
 function formatPrice(price) {
     return new Intl.NumberFormat('vi-VN').format(price) + 'đ';
 }
@@ -162,9 +274,10 @@ function updateTotal() {
 function validateForm() {
     const name = document.getElementById('customer_name').value.trim();
     const phone = document.getElementById('customer_phone').value.trim();
+    const country = document.getElementById('country_select').value;
     const paymentButton = document.getElementById('paymentButton');
     
-    if (name && phone) {
+    if (name && phone && country) {
         paymentButton.disabled = false;
     } else {
         paymentButton.disabled = true;
@@ -178,6 +291,7 @@ function sendToMessenger() {
     const notes = document.getElementById('customer_notes').value.trim();
     const total = document.getElementById('total_price').textContent;
     const selectedKit = document.getElementById('kit_select').options[document.getElementById('kit_select').selectedIndex].text;
+    const country = document.getElementById('country_select').options[document.getElementById('country_select').selectedIndex].text;
     
     // Get selected accessories
     let accessories = [];
@@ -185,10 +299,17 @@ function sendToMessenger() {
         accessories.push(checkbox.parentElement.textContent.trim());
     });
 
+    // Show loading state
+    const paymentButton = document.getElementById('paymentButton');
+    const originalText = paymentButton.textContent;
+    paymentButton.textContent = 'Đang xử lý...';
+    paymentButton.disabled = true;
+
     // Prepare order data
     const orderData = {
         customer_name: name,
         phone: phone,
+        country: country,
         product: selectedKit,
         accessories: accessories.join(', ') || 'Không có',
         total: total,
@@ -207,14 +328,37 @@ function sendToMessenger() {
     .then(response => response.json())
     .then(data => {
         if (data.status === 'success') {
-            alert('Đơn hàng đã được gửi thành công!');
+            alert('Đơn hàng đã được gửi thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+            // Reset form
+            document.getElementById('customer_name').value = '';
+            document.getElementById('customer_phone').value = '';
+            document.getElementById('customer_notes').value = '';
+            document.querySelectorAll('.form-check-input:checked').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            updateTotal();
+        } else if (data.status === 'partial_success') {
+            alert(data.message || 'Đơn hàng đã được ghi nhận. Chúng tôi sẽ liên hệ với bạn sớm.');
+            // Reset form
+            document.getElementById('customer_name').value = '';
+            document.getElementById('customer_phone').value = '';
+            document.getElementById('customer_notes').value = '';
+            document.querySelectorAll('.form-check-input:checked').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            updateTotal();
         } else {
-            alert('Có lỗi xảy ra khi gửi đơn hàng. Vui lòng thử lại sau.');
+            alert('Có lỗi xảy ra: ' + (data.message || 'Vui lòng thử lại sau.'));
         }
     })
     .catch(error => {
         console.error('Error:', error);
         alert('Có lỗi xảy ra khi gửi đơn hàng. Vui lòng thử lại sau.');
+    })
+    .finally(() => {
+        // Restore button state
+        paymentButton.textContent = originalText;
+        paymentButton.disabled = false;
     });
 }
 
@@ -241,6 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add input event listeners for form validation
     document.getElementById('customer_name').addEventListener('input', validateForm);
     document.getElementById('customer_phone').addEventListener('input', validateForm);
+    document.getElementById('country_select').addEventListener('change', validateForm);
     
     // Add click event listener for payment button
     document.getElementById('paymentButton').addEventListener('click', function() {
