@@ -160,11 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Khởi tạo carousel thứ hai
   const adjustImageSize2 = initializeCarousel('dragContainer-2');
-  
+  const adjustImageSize3 = initializeCarousel('dragContainer-3');
+
   // Xử lý sự kiện resize cho cả hai carousel
   window.addEventListener('resize', () => {
     if (adjustImageSize1) adjustImageSize1();
     if (adjustImageSize2) adjustImageSize2();
+    if (adjustImageSize3) adjustImageSize3();
+
   });
 });
 

@@ -49,15 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hàm khởi tạo carousel
   function initializeCarousel(containerId) {
     const container = document.getElementById(containerId);
+    console.log("Initializing carousel:", containerId, container ? "found" : "not found");
     if (!container) return;
     
     const wrapper = container.querySelector('.items-wrapper');
+    console.log("Found items-wrapper:", containerId, wrapper ? "found" : "not found");
+    if (!wrapper) return;
+    
     let isDragging = false;
     let startX = 0;
     let scrollLeft = 0;
     
     function adjustImageSize() {
       const items = wrapper.querySelectorAll('.item');
+      console.log("Items in carousel:", containerId, items.length);
       const containerWidth = container.offsetWidth;
       let visibleItems = 5;
       
@@ -80,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       
       wrapper.style.width = `${items.length * (itemWidth + padding)}px`;
+      console.log("Set wrapper width for", containerId, "to", wrapper.style.width);
     }
     
     function snapToEdge() {
@@ -160,21 +166,98 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Khởi tạo carousel thứ hai
   const adjustImageSize2 = initializeCarousel('dragContainer-2');
-  
+  const adjustImageSize3 = initializeCarousel('dragContainer-3');
+
   // Xử lý sự kiện resize cho cả hai carousel
   window.addEventListener('resize', () => {
     if (adjustImageSize1) adjustImageSize1();
     if (adjustImageSize2) adjustImageSize2();
+    if (adjustImageSize3) adjustImageSize3();
+
   });
 });
 
 // Hàm cuộn carousel theo id
 function scrollContainer(amount, containerId) {
+  console.log("scrollContainer called for:", containerId, "with amount:", amount);
   const container = document.getElementById(containerId || 'dragContainer');
+  console.log("Container found:", container ? "yes" : "no");
   if (container) {
+    console.log("Before scroll, scrollLeft:", container.scrollLeft);
     container.scrollBy({
       left: amount,
       behavior: 'smooth'
     });
+    setTimeout(() => {
+      console.log("After scroll, scrollLeft:", container.scrollLeft);
+    }, 500);
   }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const containers = document.querySelectorAll('.drag-container');
+    
+    containers.forEach(container => {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        // Mouse events
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            container.classList.add('dragging');
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDragging = false;
+            container.classList.remove('dragging');
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDragging = false;
+            container.classList.remove('dragging');
+        });
+
+        // Touch events
+        container.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            container.classList.add('dragging');
+            startX = e.touches[0].pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        container.addEventListener('touchend', () => {
+            isDragging = false;
+            container.classList.remove('dragging');
+        });
+    });
+});
+
+// Function to handle button scrolling
+function scrollContainer(scrollOffset, containerId) {
+    const container = document.getElementById(containerId);
+    if (container) {
+        const currentScroll = container.scrollLeft;
+        container.scrollTo({
+            left: currentScroll + scrollOffset,
+            behavior: 'smooth'
+        });
+    }
 }

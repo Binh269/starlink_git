@@ -86,8 +86,8 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-white left" href="#">KẾ HOẠCH DỊCH VỤ</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="specifications.html">THÔNG SỐ KỸ THUẬT</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="help_center.html">Câu hỏi thường gặp</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="{% url 'specifications' %}">THÔNG SỐ KỸ THUẬT</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="{% url 'help_center'%}">Câu hỏi thường gặp</a></li>
                         <li class="nav-item">
                             <a href="{% url 'order' product_code='DNQT002' %}" class="btn btn-light" style="font-weight: bolder;font-size: small;">ORDER NOW</a>
                         </li>
@@ -107,19 +107,19 @@
                         <div class="d-flex flex-nowrap align-items-center px-3" style="width: 100%;max-width: 85%;overflow: visible;"><button class="btn text-white" type="button" onclick="scrollContainer(-200, &#39;dragContainer-2&#39;)"><i class="fas fa-angle-left"></i></button>
                             <div id="dragContainer-2" class="drag-container" role="region" aria-label="Image carousel" style="/*padding-left: 15px;*//*margin-left: -15px;*//*align-items: center;*//*justify-content: center;*//*width: 91%;*/">
                                 <div class="items-wrapper" style="width: 100%;">
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/landmobility_a_casestudy_emergency_d.webp' %}" alt="Starlink">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/landmobility_a_casestudy_emergency_d.webp' %}" alt="Starlink">
                                         <h5 class="text-uppercase"> Dịch vụ khẩn cấp </h5>
                                         <p class="text-start"> Cho phép người ứng cứu khẩn cấp phối hợp và truy cập thông tin quan trọng trong khu vực thảm họa. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/landmobility_a_casestudy_health_d.webp' %}" width="350" height="163">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/landmobility_a_casestudy_health_d.webp' %}" width="350" height="163">
                                         <h5 class="text-uppercase">Sức khỏe </h5>
                                         <p class="text-start"> Quản lý dữ liệu sức khỏe bệnh nhân an toàn với kết nối ưu tiên cho các ứng dụng sức khỏe di động. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/landmobility_a_casestudy_trucking_d.webp' %}">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/landmobility_a_casestudy_trucking_d.webp' %}">
                                         <h5 class="text-uppercase">Vận tải đường bộ </h5>
                                         <p class="text-start"> Hỗ trợ điều hướng, liên lạc và dịch vụ phát trực tuyến cho các phương tiện trên đường. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/fixedsite_a_casestudy_education_d%20(1).webp' %}">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/fixedsite_a_casestudy_education_d%20(1).webp' %}">
                                         <h3><span style="color: rgb(227, 227, 232); background-color: rgb(37, 37, 41);">Retail &amp; Hospitality</span></h3>
                                         <p class="text-start"> Connect more devices and coordinate in real-time with employees and business partners across sites. </p>
                                     </div>
@@ -131,8 +131,8 @@
             </div>
         </section>
     </div>
-    <div style="background: url('assets/img/home_illustriation2_d.webp') no-repeat right center / 70%;color: white;background-attachment: fixed;background-color: black;height: auto;">
-        <div style="background: url('assets/img/landmobility_a_feature1_d%20(1).webp') no-repeat center center / cover;color: white;padding: 5% 0 20%;">
+    <div style="background: url('{% static 'img/home_illustriation2_d.webp' %}') no-repeat right center / 70%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <div style="background: url('{% static 'img/landmobility_a_feature1_d%20(1).webp' %}') no-repeat center center / cover;color: white;padding: 5% 0 20%;">
             <div class="row" style="padding-top: 7%;">
                 <div class="col-md-7 col-lg-7 col-xl-7 col-xxl-7 offset-md-2 offset-lg-0 offset-xl-1 col-xl-4 col-md-5 offset-md-3" style="padding: 0 5% 5% 5%;margin-left: 1px;">
                     <div>
@@ -167,8 +167,8 @@
             </div>
         </section>
     </div>
-    <div style="background: url('assets/img/residentaial_illustriation3_d.webp') no-repeat calc(100% - -55%) center / 75%;color: white;background-attachment: fixed;background-color: black;">
-        <div style="background: url('assets/img/landmobility_a_weather_d.webp') no-repeat center center / cover;color: white;/*padding: 5% 0 20%;*/">
+    <div style="background: url('{% static 'img/residentaial_illustriation3_d.webp' %}') no-repeat calc(100% - -55%) center / 75%;color: white;background-attachment: fixed;background-color: black;">
+        <div style="background: url('{% static 'img/landmobility_a_weather_d.webp' %}') no-repeat center center / cover;color: white;/*padding: 5% 0 20%;*/">
             <div class="row" style="padding: 35% 0 7%;">
                 <div class="col-md-7 col-lg-7 col-xl-7 col-xxl-7 offset-md-2 offset-lg-0 offset-xl-1 col-xl-4 col-md-5 offset-md-3" style="padding: 0 5% 5% 5%;margin-left: 1px;">
                     <div>
@@ -190,7 +190,7 @@
             </div>
         </div>
         <div style="/*background: url('assets/img/home_illustriation2_d.webp') no-repeat right center / 70%;*/color: white;background-attachment: fixed;/*background-color: black;*/height: auto;padding-top: 5%;">
-            <div style="background: url('assets/img/fixedsite_a_hardware_d.webp') no-repeat center center / cover;color: white;height: 800px;">
+            <div style="background: url('{% static 'img/fixedsite_a_hardware_d.webp' %}') no-repeat center center / cover;color: white;height: 800px;">
                 <div class="row">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-md-0"></div>
                     <div class="col-md-6 col-lg-5 col-xl-6 col-xxl-6 offset-md-5 offset-lg-3 offset-xl-1 col-xl-4 col-md-5 offset-md-3 text-start justify-content-sm-center text-sm-center text-xl-start text-lg-start text-md-start" style="padding: 0 5% 5% 5%;margin-left: 1px;">
@@ -286,7 +286,7 @@
             <div style="background: url('assets/img/residentaial_illustriation2_d.webp') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;">
                 <div class="row gy-4 gy-md-0" style="max-width: 100%;">
                     <div class="col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-1 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1 khung_ngoai" style="padding: 0 15px 10px 0;min-height: 400px;margin-right: 10px;">
-                        <div class="row fixed_site" style="padding-top: 7%;background: url('assets/img/landmobility_a_fixedsite_d.webp') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="row fixed_site" style="padding-top: 7%;background: url('{% static 'img/landmobility_a_fixedsite_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                             <div class="col-sm-11 col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                                 <div>
                                     <h3 class="text-uppercase fw-bold" href="#" style="white-space: nowrap;">TRẠM CỐ ĐỊNH</h3>
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                     <div class="col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-4 offset-sm-3 offset-md-10 offset-xl-0 khung_ngoai" style="padding: 0 0 10px 15px;min-height: 400px;margin-left: 10px;">
-                        <div class="row maritime" style="padding-top: 7%;background: url('assets/img/business_home_a_maritime_d.webp') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="row maritime" style="padding-top: 7%;background: url('{% static 'img/business_home_a_maritime_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
                             <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
                                 <div>
                                     <h1 class="text-uppercase fw-bold" href="#">Hàng hải</h1>

@@ -1,0 +1,109 @@
+/* Carousel styles */
+.drag-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    cursor: grab;
+}
+
+.drag-container:active {
+    cursor: grabbing;
+}
+
+.drag-container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.drag-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.drag-container .items-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.drag-container .item {
+    flex: 0 0 auto;
+    width: 300px;
+    user-select: none;
+}
+
+.drag-container .item:first-child {
+    margin-left: 0;
+}
+
+.drag-container .item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.drag-container .item:hover img {
+    transform: scale(1.05);
+}
+
+.drag-container .item p {
+    margin-top: 10px;
+    white-space: normal;
+    font-size: 14px;
+    font-weight: bold;
+    color: #eeeeee;
+}
+
+.drag-container.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+/* Specific styles for dragContainer-3 */
+#dragContainer-3::-webkit-scrollbar,
+#dragContainer-2::-webkit-scrollbar,
+#dragContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#dragContainer-3,
+#dragContainer-2,
+#dragContainer {
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    z-index: 10;
+    position: relative;
+    cursor: grab;
+}
+
+#dragContainer-3 *,
+#dragContainer-2 *,
+#dragContainer * {
+    box-sizing: border-box;
+}
+
+/* Override max-width for specific images */
+.img-built, .img-built1 {
+    max-width: none !important;
+    border-bottom: none !important;
+}
+
+/* Extra styles for dragContainer-3 to fix scrolling issues */
+#dragContainer-3 {
+    width: 100% !important;
+    overflow-x: scroll !important;
+}
+
+#dragContainer-3 .items-wrapper {
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    min-width: 100% !important;
+}
+
+#dragContainer-3 .item {
+    flex: 0 0 auto !important;
+    min-width: 250px !important;
+} 

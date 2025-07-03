@@ -12,25 +12,16 @@
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/swiper-icons.css' %}">
     <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome-all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'assets/css/Footer-Dark-Multi-Column-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Hero-Carousel-images.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-1.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-4.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-11.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Media-Slider-Bootstrap-3-media.slider.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Media-Slider-Bootstrap-3.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/Simple-Slider-swiper-bundle.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/Simple-Slider.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-10.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-12.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-6.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-7.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled-9.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/Pricing-Yearly--Monthly-badges.css' %}">
-    <link rel="stylesheet" href="{% static 'css/untitled.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Simple-Slider-swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-icons.css' %}">
 </head>
 
 <body>
@@ -137,7 +128,7 @@
             <div class="collapse navbar-collapse justify-content-end text-uppercase" id="navbarNav-1" style="font-weight: bold;">
                 <ul class="navbar-nav">
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="help_center.html">Câu hỏi thường gặp</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url 'help_center' %}">Câu hỏi thường gặp</a></li>
                     <li class="nav-item" style="display: flex;justify-content: center;align-items: center;"><button class="btn" type="button" style="border: 1px solid white;background-color: white;color: black;font-weight: bolder;font-size: small;"> CONTACT US </button></li>
                 </ul>
             </div>
@@ -151,19 +142,19 @@
                         <div class="d-flex flex-nowrap align-items-center px-3" style="width: 100%;max-width: 85%;overflow: visible;"><button class="btn text-white" type="button" onclick="scrollContainer(-200, &#39;dragContainer-2&#39;)"><i class="fas fa-angle-left"></i></button>
                             <div id="dragContainer-2" class="drag-container" role="region" aria-label="Image carousel" style="/*padding-left: 15px;*//*margin-left: -15px;*//*align-items: center;*//*justify-content: center;*//*width: 91%;*/">
                                 <div class="items-wrapper" style="width: 100%;">
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/aviation_casestudy_businessaviation_d.webp' %}" alt="Starlink">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/aviation_casestudy_businessaviation_d.webp' %}" alt="Starlink">
                                         <h5 class="text-uppercase"> Hàng không kinh doanh </h5>
                                         <p class="text-start"> Starlink đang mở rộng danh sách các chứng nhận và máy bay được hỗ trợ. Mua thông qua một trong những đại lý ủy quyền của chúng tôi. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/aviation_casestudy_aircraftaanufacturers_d.webp' %}">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/aviation_casestudy_aircraftaanufacturers_d.webp' %}">
                                         <h5 class="text-uppercase"> Nhà sản xuất máy bay </h5>
                                         <p class="text-start"> Từ máy bay siêu thanh đến máy bay trực thăng và VTOL, Starlink có một giải pháp phần cứng và dịch vụ phù hợp với ứng dụng của bạn. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/aviation_casestudy_airlines_d.webp' %}">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/aviation_casestudy_airlines_d.webp' %}">
                                         <h5 class="text-uppercase"> Hãng hàng không </h5>
                                         <p class="text-start"> Với hơn 30.000 chuyến bay trên Nhà ga Hàng không có độ tin cậy cao và phạm vi bảo hiểm toàn cầu đã được chứng minh chuyến bay, Starlink có vị trí tốt để thay đổi trải nghiệm hành khách của bạn. </p>
                                     </div>
-                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;"><img class="img-built" src="{% static 'img/fixedsite_a_casestudy_education_d%20(1).webp' %}">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;min-width:400px;"><img class="img-built" style="object-fit: cover;min-width:350px;" src="{% static 'img/fixedsite_a_casestudy_education_d%20(1).webp' %}">
                                         <h3><span style="color: rgb(227, 227, 232); background-color: rgb(37, 37, 41);">Retail &amp; Hospitality</span></h3>
                                         <p class="text-start"> Connect more devices and coordinate in real-time with employees and business partners across sites. </p>
                                     </div>
@@ -271,7 +262,6 @@
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'assets/js/built.js' %}"></script>
-    <script src="assets/js/hearder.js"></script>
     <script src="{% static 'assets/js/banner.js' %}"></script>
     <script src="{% static 'assets/js/Media-Slider-Bootstrap-3-media.slider.js' %}"></script>
     <script src="{% static 'assets/js/Simple-Slider-swiper-bundle.min.js' %}"></script>
