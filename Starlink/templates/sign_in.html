@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+<style>
+    .newsletter-subscribe{
+        display: none;
+    }
+</style>
+    <section class="py-4 py-xl-5" style="min-height: 500px;background-color: black;">
+        <div class="container" style="padding: 2% 5%;width: 100%;">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-0 text-white" style="border: 1px solid white;border-radius: 10px;padding: 5%;margin-top: 10%;">
+                    <h1 class="text-uppercase" style="width: 100%;text-align: start;">ĐĂNG NHẬP</h1>
+                    <input type="email" id="email-1" class="placeholder_built" style="width: 100%;background-color: #000000;" placeholder="Email">
+                    <input type="password" id="password-1" class="placeholder_built" placeholder="Password">
+                    <button class="btn" type="button" style="width: 100%;background-color: #ffffff;color: #000000;font-weight: 700;margin-top: 5%;" src="{% url 'index' %}">Đăng nhập</button>
+                    <p style="width: 100%;padding-top: 10%;">BẠN CẦN HỖ TRỢ?</p>
+                </div>
+                <div class="col-md-8 col-lg-5 col-xl-5 col-xxl-5 offset-md-2 offset-lg-1 offset-xl-1 offset-xxl-1 align-items-center d-flex flex-column justify-content-center" style="margin-top: 10%;">
+                    <div class="text-start d-flex flex-nowrap flex-row justify-content-between align-items-center" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                        <div>
+                            <h6>KÍCH HOẠT STARLINK CỦA BẠN</h6>
+                            <p style="font-size: 12px;">Đã nhận bộ Starlink và sẵn sàng lắp đặt?<br><br></p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="font-size: 30px;margin-right: 10%;"></i>
+                    </div>
+                    <div class="text-start d-flex flex-nowrap flex-row justify-content-between align-items-center" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                        <div>
+                            <h6>ĐẶT MUA STARLINK NGAY</h6>
+                            <p style="font-size: 12px;">Dùng thử 30 ngày với chính sách hoàn tiền nếu không hài lòng</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="font-size: 30px;margin-right: 10%;"></i>
+                    </div>
+                    <div class="text-start d-flex flex-nowrap flex-row justify-content-between align-items-center" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                        <div>
+                            <h6>GHÉ THĂM TRUNG TÂM HỖ TRỢ</h6>
+                            <p style="font-size: 12px;">Nhận hướng dẫn từ đội ngũ hỗ trợ của chúng tôi</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="font-size: 30px;margin-right: 10%;"></i>
+                    </div>
+                    <div class="text-start d-flex flex-nowrap flex-row justify-content-between align-items-center" style="border-bottom: 1px solid #808080;padding: 2% 0 4% 0;width: 100%;">
+                        <div>
+                            <h6>KHÁM PHÁ CÂU CHUYỆN KHÁCH HÀNG</h6>
+                            <p style="font-size: 12px;">Tìm hiểu thêm về cộng đồng người dùng Starlink</p>
+                        </div>
+                        <i class="fas fa-chevron-right" style="font-size: 30px;margin-right: 10%;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock main %}

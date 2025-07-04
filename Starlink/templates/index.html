@@ -31,7 +31,7 @@
                                 <p class="card-text" style="font-size: small;">Kết nối tại nhà </p>
                                 <div class="d-flex justify-content-start order_index" id="order_index" style="margin-top: 11%;align-items: center;">
                                     <a class="btn order-now" role="button" id="btn_kdc" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a>
-                                    <a class="btn learn-more" role="button" id="learn-more_kdc" href="residential.html" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a>
+                                    <a class="btn learn-more" role="button" id="learn-more_kdc" href="{% url 'residential' %}" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a>
                                 </div>
                                 <div class="row" id="noidung_kdc" style="display: none;">
                                     <div class="col-sm-7 col-md-8 col-lg-8 col-xl-7 col-xxl-9 offset-sm-1 offset-md-0 offset-lg-0 offset-xl-1 offset-xxl-0 col-12" style="margin-top: 10px;">
@@ -65,7 +65,7 @@
                                 <p class="card-text" style="font-size: small;">Kết nối trong khi đi du lịch bất cứ nơi nào trong hơn 100 thị trường </p>
                                 <div class="d-flex justify-content-start" style="margin-top: 11%;align-items: center;">
                                     <a class="btn order-now" role="button" id="btn_cv" href="#" style="background: white;color: black;font-weight: 600;font-size: smaller;margin-right: 10px;font-family: inherit;border: 1px solid;padding-left: clamp(10px,1vw,50px);">Đặt hàng ngay</a>
-                                    <a class="btn learn-more" role="button" id="learn-more_cv" href="roam.html" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a>
+                                    <a class="btn learn-more" role="button" id="learn-more_cv" href="{% url 'roam' %}" style="background: black;color: white;font-weight: 600;font-size: smaller;margin-left: 10px;font-family: inherit;border: 1px solid white;padding-left: clamp(10px,1vw,50px);">Tìm hiểu thêm</a>
                                 </div>
                                 <div class="row" id="noidung_cv" style="display: none;">
                                     <div class="col-xxl-12">
@@ -217,7 +217,7 @@
                                     </div>
                                     <div class="col">
                                         <div style="height: 100%;text-align: center;">
-                                            <a class="btn btn-lg col-xl-5" role="button" href="roam.html" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Tìm hiểu thêm
+                                            <a class="btn btn-lg col-xl-5" role="button" href="{% url 'roam' %}" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">Tìm hiểu thêm
                                                 <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
                                             </a>
                                         </div>
@@ -237,7 +237,7 @@
             </p>
             <div class="justify-content-center flex-row align-items-center flex-wrap" style="display: flex;margin-top: 2%;">
                 <span class="text-uppercase" style="padding: 0 10px;text-align: center;">Internet tốc độ cao đáng tin cậy, được thiết kế để giữ các doanh nghiệp luôn kết nối.</span>
-                <a href="business.html">
+                <a href="{% url 'index_business' %}">
                     <button class="btn justify-content-center text-uppercase" type="button" style="width: auto;font-weight: 800;color: white;font-size: x-small;display: flex;align-items: center;">Tìm hiểu thêm
                         <i class="fas fa-chevron-right" id="icon_play-1" style="margin: 5px;font-size: 15px;"></i>
                     </button>
@@ -279,11 +279,11 @@
                     </span>
                     <p>Starlink yêu cầu tầm nhìn không bị che khuất lên bầu trời. Tải ứng dụng Starlink để xác định vị trí lắp đặt tối ưu của bạn.</p>
                     <div class="row text-uppercase" style="text-align: start;">
-                        <a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">
+                        <a class="btn btn-lg col-xl-5" role="button" href="https://play.google.com/store/apps/details?id=com.starlink.mobile" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">
                             <span style="color: white; background-color: black;">Tải xuống cho Android</span>
                             <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
                         </a>
-                        <a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,20px);text-align: start;width: auto;">
+                        <a class="btn btn-lg col-xl-5" role="button" href="https://apps.apple.com/app/starlink/id1537177988" style="color: white;font-size: clamp(9px , 1vw,20px);text-align: start;width: auto;">
                             <span style="color: white; background-color: black;">Tải xuống cho iOS</span>
                             <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
                         </a>

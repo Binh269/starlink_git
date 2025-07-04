@@ -8,20 +8,4 @@ window.addEventListener('scroll', () => {
     navbar.style.backgroundColor = 'transparent'; 
   }
 });
-document.querySelector('.fixed_site').addEventListener('click', function() {
-    window.location.href = 'business_fixed-site.html';
-});
-
-document.querySelector('.mobility').addEventListener('click', function() {
-    window.location.href = 'business_mobility.html';
-});
-
-document.querySelector('.maritime').addEventListener('click', function() {
-    window.location.href = 'business_maritime.html';
-});
-
-document.querySelector('.direct_to_cell').addEventListener('click', function() {
-    window.location.href = 'business_direct-to-cell.html';
-});
-
 

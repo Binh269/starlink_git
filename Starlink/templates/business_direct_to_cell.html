@@ -1,0 +1,125 @@
+{% extends "base_business.html" %}
+{% load static %}
+
+{% block main_business %}
+    <div style="background: url('{% static 'img/home_illustriation1_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <section class="py-4 py-xl-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.88)), url('{% static 'img/BG-image-scaled.jpg' %}') no-repeat center center /cover;min-height: 500px;">
+            <div class="main">
+                <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 4vw, 60px);margin-bottom: 0rem;"><br>
+                    <strong>STARLINK KẾT NỐI TRỰC TIẾP ĐẾN ĐIỆN THOẠI</strong>
+                </p>
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 400;margin-bottom: auto;">Được thiết kế để xóa bỏ các vùng mất sóng di động trên toàn thế giới.<br>Dịch vụ hiện đã khả dụng.</p>
+            </div>
+            <div class="d-flex justify-content-center" style="padding: 5%;">
+                <button class="btn w-100 w-md-auto d-block text-uppercase" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;max-width: 200px;font-weight: bold;">TÌM HIỂU THÊM</button>
+            </div>
+        </section>
+        <div class="main" style="padding: 5% 0;">
+            <p style="text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);margin-bottom: 0rem;">
+                <br>
+                <strong>PHỦ SÓNG MỌI NƠI</strong>
+            </p>
+            <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 3vw, 20px);height: auto;font-weight: 600;padding: 0 20%;margin-bottom: auto;">Các vệ tinh Starlink với khả năng kết nối trực tiếp đến điện thoại cho phép bạn nhắn tin, gọi điện và truy cập Internet ở bất kỳ đâu – dù bạn đang ở trên đất liền, hồ nước hay vùng ven biển. Direct to Cell cũng sẽ hỗ trợ kết nối các thiết bị IoT sử dụng tiêu chuẩn LTE phổ biến.</p>
+        </div>
+        <section class="py-4 py-xl-5" style="color: white;">
+            <div class="container" id="feature-section-1" style="width: 100%;height: 100%;">
+                <div class="row">
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/chatting.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold" style="padding: 10% 0;">Nhắn tin</h1>
+                        <span class="text-center">Bắt đầu từ năm 2024</span>
+                    </div>
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/data-modelling.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold" style="padding: 10% 0;">Dữ liệu &amp; IOT</h1>
+                        <span class="text-center">Bắt đầu từ năm 2025</span>
+                    </div>
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/microphone.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold" style="padding: 10% 0;">Gọi thoại</h1>
+                        <span class="text-center">Sắp ra mắt</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 gy-md-0" style="padding: 10% 5%;">
+                <div class="col-md-6">
+                    <img class="rounded img-fluid" src="{% static 'img/quad_picture.png' %}" style="width: 100%;height: 100%;"></div>
+                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-xl-0 offset-xxl-0 d-md-flex align-items-md-center" style="margin-left: 5%;">
+                    <div>
+                        <h2 class="text-uppercase fw-bold">LUÔN KẾT NỐI</h2>
+                        <p>Direct to Cell hoạt động với các điện thoại LTE hiện có ở bất kỳ nơi nào bạn có thể nhìn thấy bầu trời. Không cần thay đổi phần cứng, firmware hoặc cài đặt ứng dụng đặc biệt, cho phép truy cập liền mạch đến tin nhắn, thoại và dữ liệu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="text-white" style="background-color: #000000;">
+        <div class="row g-0" style="padding: 0 5%;">
+            <div class="col-md-6 col-xl-6 col-xxl-6 offset-md-0 offset-xxl-0 d-md-flex align-items-md-center">
+                <div style="padding: 0 10%;">
+                    <h2 class="text-uppercase fw-bold">MỘT TRẠM PHÁT SÓNG TRÊN KHÔNG GIAN</h2>
+                    <p>Các vệ tinh Starlink có khả năng Direct to Cell được tích hợp modem eNodeB tiên tiến, hoạt động như một trạm phát sóng di động trên không gian, cho phép tích hợp mạng tương tự như một đối tác roaming thông thường.</p>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-0 offset-xl-0 offset-xxl-0 order-first order-md-last order-1">
+                <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/diagram-v2-rescoped3.png' %}" style="width: 100%;height: 100%;">
+            </div>
+        </div>
+    </div>
+    <div style="background: url('{% static 'img/dtc-earth-background.jpeg' %}') no-repeat center center / cover;color: white;padding-bottom: 0px;">
+        <div class="row" style="padding-top: 7%;padding-bottom: 25%;">
+            <div class="col-md-10 col-lg-7 col-xl-6 col-xxl-6 offset-md-1 offset-lg-5 offset-xl-6 offset-xxl-6 col-xl-4 col-md-5" style="padding: 5% 5% 5% 5%;">
+                <div>
+                    <h1 class="text-uppercase fw-bold">XÓA BỎ VÙNG MẤT SÓNG</h1>
+                    <p class="my-3">Mang lại kết nối cho các khu vực xa xôi, giúp người dùng yên tâm khi cần thiết nhất.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-white" style="background-color: #000000;">
+        <div class="row gy-4 gy-md-0 text-white" style="padding: 10% 5%;background-color: #000000;">
+            <div class="col-md-6"><img class="rounded img-fluid" src="{% static 'img/dtc-stacksquare.jpeg' %}" style="width: 100%;height: 100%;"></div>
+            <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-xl-0 offset-xxl-0 d-md-flex align-items-md-center" style="margin-left: 5%;">
+                <div>
+                    <h2 class="text-uppercase fw-bold">KỸ THUẬT CỦA SPACEX</h2>
+                    <p>SpaceX tận dụng kinh nghiệm trong sản xuất và phóng các tên lửa và tàu vũ trụ tiên tiến nhất thế giới để triển khai vệ tinh Starlink với khả năng Direct to Cell ở quy mô lớn.</p>
+                    <p>Các vệ tinh sẽ được phóng bằng tên lửa Falcon 9 của SpaceX và sau đó là Starship. Trên quỹ đạo, chúng sẽ kết nối ngay lập tức qua liên kết laser với chòm sao Starlink để cung cấp kết nối toàn cầu.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0" style="padding: 0 5%;">
+            <div class="col-md-6 col-xl-6 col-xxl-6 offset-md-0 offset-xxl-0 d-md-flex align-items-md-center">
+                <div style="padding: 0 10%;">
+                    <h2 class="text-uppercase fw-bold">Trao Quyền Cho Kết Nối Di Động và IoT</h2>
+                    <p>Bên cạnh việc mở rộng vùng phủ sóng di động, Direct to Cell còn cho phép kết nối IoT ở mọi nơi ngoài vùng phủ sóng mặt đất, giúp kết nối hàng triệu thiết bị trên các ngành công nghiệp quan trọng toàn cầu.</p>
+                    <p>• Không cần thiết bị chuyên dụng hoặc phần cứng bổ sung<br>• Tương thích với các modem CAT-1, CAT-1 Bis và CAT-4 thông dụng<br>• Các gói dịch vụ sẽ khả dụng thông qua các đối tác toàn cầu tại các quốc gia được phê duyệt từ năm 2025</p>
+                    <p>* Tuân thủ 3GPP release 10 trở lên, modem cần hỗ trợ các băng tần hiện hành tại quốc gia sử dụng dịch vụ</p>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-0 offset-xl-0 offset-xxl-0 order-first order-md-last order-1">
+                <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/DTC_IoT_Verticals.jpg' %}" style="width: 100%;height: 100%;">
+            </div>
+        </div>
+        <div class="row g-0" style="padding: 10% 5%;">
+            <div class="col-md-6 col-xl-6 col-xxl-6 offset-md-0 offset-xxl-0 d-md-flex align-items-md-center">
+                <div style="padding: 0 10%;">
+                    <h2 class="text-uppercase fw-bold">CÁC ĐỐI TÁC TOÀN CẦU</h2>
+                    <p>Các nhà mạng sử dụng Direct to Cell sẽ được truy cập toàn cầu tương hỗ tại tất cả các quốc gia đối tác.</p>
+                    <p>T-MOBILE (Hoa Kỳ) &gt;</p>
+                    <p>OPTUS (Úc) &gt;</p>
+                    <p>Telstra (Úc) &gt;</p>
+                    <p>ROGERS (Canada)&nbsp;&gt;</p>
+                    <p>One NZ (New Zealand) &gt;</p>
+                    <p>KDDI (Nhật Bản)&nbsp;&gt;</p>
+                    <p>Salt (Thụy Sĩ) &gt;</p>
+                    <p>ENTEL (Chile)&nbsp;&gt;</p>
+                    <p>ENTEL (PERU)&nbsp;&gt;</p>
+                    <p>KYIVSTAR (Ukraina) &gt;</p>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-0 offset-xl-0 offset-xxl-0 order-first order-md-last order-1">
+                <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/elon-and-mike-1024x1024.jpg' %}" style="width: 100%;height: 100%;">
+            </div>
+        </div>
+    </div>
+{% endblock main_business %}

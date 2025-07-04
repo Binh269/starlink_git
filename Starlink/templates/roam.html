@@ -29,10 +29,10 @@
                         <a class="nav-link text-white left" href="#" style="font-weight: bold;">Kế hoạch dịch vụ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="specifications.html">THÔNG SỐ KỸ THUẬT</a>
+                        <a class="nav-link text-white" href="{% url 'specifications' %}">THÔNG SỐ KỸ THUẬT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="help_center.html">Câu hỏi thường gặp</a>
+                        <a class="nav-link text-white" href="{% url 'help_center' %}">Câu hỏi thường gặp</a>
                     </li>
                     <li class="nav-item" style="display: flex;justify-content: center;align-items: center;">
                         <button class="btn" type="button" style="border: 1px solid white;background-color: white;color: black;font-weight: bolder;font-size: small;"> ORDER NOW </button>
@@ -83,7 +83,7 @@
                     <p style="padding-top: 2%;">Tận hưởng internet tốc độ cao cho tàu thuyền của bạn trên vùng nội địa và lãnh hải với Starlink Roam.</p>
                     <p>Để sử dụng trên vùng biển quốc tế và hành trình đại dương, hãy xem Starlink Maritime để chọn gói dịch vụ phù hợp với nhu cầu của bạn.</p>
                     <div class="row" style="text-align: start;">
-                        <a class="btn btn-lg col-xl-5" role="button" href="business_maritime.html" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;border: 1px solid;">XEM HÀNG HẢI</a>
+                        <a class="btn btn-lg col-xl-5" role="button" href="{% url 'business_maritime' %}" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;border: 1px solid;">XEM HÀNG HẢI</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 <div>
                     <h1 class="text-uppercase fw-bold" style="white-space: normal;font-size: clamp(15px,2vw,30px);">CÁI GÌ TRONG HỘP TIÊU CHUẨN</h1>
                     <p class="my-3">Starlink Kit đến với mọi thứ bạn cần để lên mạng trong vài phút.</p>
-                    <a href="specifications.html" style="font-size: 12px;text-align: center;height: auto;white-space: nowrap;">
+                    <a href="{% url 'specifications' %}" style="font-size: 12px;text-align: center;height: auto;white-space: nowrap;">
                         THÔNG SỐ KỸ THUẬT XEM
                         <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
                     </a>

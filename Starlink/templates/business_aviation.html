@@ -1,0 +1,244 @@
+{% extends "base_business.html" %}
+{% load static %}
+
+{% block main_business %}
+    <div style="background: url('{% static 'img/home_illustriation1_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <section class="py-4 py-xl-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.88)), url('{% static 'img/Aviation_hero_d2.webp' %}') no-repeat center center /cover;min-height: 500px;">
+            <div class="main">
+                <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);/*font-weight: 600;*/margin-bottom: 0rem;"><br>
+                    <strong>STARLINK CHO HÀNG KHÔNG</strong>
+                </p>
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 400;margin-bottom: auto;">
+                    <strong>Có sẵn trên khung máy bay của bạn.</strong>
+                </p>
+            </div>
+            <div class="d-flex justify-content-center" style="padding: 5%;">
+                <button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;max-width: 200px;font-size: smaller;font-weight: bold;">LIÊN HỆ VỚI CHÚNG TÔI</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="main text-white" style="background-color: black;">
+        <div class="container py-4 py-xl-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-12 offset-xl-2 text-center mx-auto">
+                    <h2 class="text-uppercase">Internet tốc độ cao trong chuyến bay</h2>
+                </div>
+                <div class="col-md-8 col-lg-12 col-xl-12 text-center mx-auto" style="padding-top: 5%;">
+                    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 d-xl-flex text-uppercase">
+                        <div class="col-md-10 col-lg-4 col-xl-3 offset-md-1 offset-lg-0 offset-xl-2">
+                            <h4>Tốc độ tải xuống mỗi thiết bị</h4>
+                            <p style="font-size: larger;font-weight: 800;">40-220 MBPS</p>
+                        </div>
+                        <div class="col-md-10 col-lg-4 col-xl-3 offset-md-1 offset-lg-0 offset-xl-0">
+                            <h4>Tốc độ tải lên mỗi thiết bị</h4>
+                            <p style="font-size: larger;font-weight: 800;"><strong>8-25 MBPS</strong></p>
+                        </div>
+                        <div class="col-md-10 col-lg-4 col-xl-3 offset-md-1 offset-lg-0 offset-xl-0">
+                            <h4>Độ trễ</h4>
+                            <p style="font-size: larger;font-weight: 800;"><strong>Dưới 99 ms</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 d-xl-flex text-white">
+                <div class="col-xl-3">
+                    <div class="card mb-4" style="height: 100%;">
+                        <div class="card-body text-center p-3 gap-3 text-white" style="background-color: black;">
+                            <h4 class="fw-bold card-subtitle text-uppercase">Gói Doanh Nghiệp 20GB</h4>
+                            <h4 class="display-5 fw-bold card-title">80 Triệu<span style="font-size: small;">/Tháng</span></h4>
+                            <p>Dữ liệu hàng không doanh nghiệp toàn cầu 20GB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="card mb-4" style="height: 100%;background-color: black;">
+                        <div class="card-body text-center p-3 gap-3 text-white">
+                            <h4 class="fw-bold card-subtitle text-uppercase">Doanh Nghiệp<br>Không giới hạn</h4>
+                            <h4 class="display-5 fw-bold card-title">50 Triệu<span style="font-size: small;">/Tháng</span></h4>
+                            <p>Dữ liệu hàng không doanh nghiệp toàn cầu không giới hạn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="card mb-4" style="height: 100%;background-color: black;">
+                        <div class="card-body text-center p-3 gap-3 text-white">
+                            <h4 class="fw-bold card-subtitle text-uppercase">Chính phủ<br>Không giới hạn</h4>
+                            <p style="font-weight: 800;padding-top: 5%;">
+                                <strong>Liên hệ với chúng tôi để biết chi tiết và giá cả</strong>
+                            </p>
+                            <p>Các khả năng nâng cao hỗ trợ một loạt các máy bay của Chính phủ và các nhiệm vụ đặc biệt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="card mb-4" style="height: 100%;background-color: black;">
+                        <div class="card-body text-center p-3 gap-3 text-white">
+                            <h4 class="fw-bold card-subtitle text-uppercase">Thương mại<br>Không giới hạn</h4>
+                            <p style="font-weight: 800;padding-top: 5%;">
+                                <strong>Liên hệ với chúng tôi để biết chi tiết và giá cả</strong>
+                            </p>
+                            <p>Tăng cường tốc độ hỗ trợ phát trực tuyến cho mọi hành khách</p>
+                            <p style="font-weight: 100;font-size: smaller;">Bao gồm máy bay BBJ / ACJ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" style="padding-bottom: 10%;">
+            <button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;width: auto;max-width: 200px;font-size: smaller;font-weight: bold;">LIÊN HỆ VỚI CHÚNG TÔI</button>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-nav" style="padding: clamp(20px,1vw,50px) clamp(24px, 2vw, 60px);background-color: #1a1a1a;color: var(--on-surface-color);">
+        <div class="container-fluid" style="text-align: center;justify-content: space-between;">
+            <a class="navbar-brand fw-bold text-white" href="#" style="max-width: 180px;">
+                <span class="text-uppercase">Hàng không</span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end text-uppercase" id="navbarNav-1" style="font-weight: bold;">
+                <ul class="navbar-nav">
+                    <li class="nav-item"></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'help_center' %}">Câu hỏi thường gặp</a>
+                    </li>
+                    <li class="nav-item" style="display: flex;justify-content: center;align-items: center;">
+                        <button class="btn" type="button" style="border: 1px solid white;background-color: white;color: black;font-weight: bolder;font-size: small;"> CONTACT US </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="color: white;background-attachment: fixed;background-color: black;">
+        <section class="newsletter-subscribe py-4 py-xl-5">
+            <div class="row" style="padding-top: 7%;">
+                <div class="col-xxl-12">
+                    <div style="width: 100%;display: flex;justify-content: center;align-items: center;/*padding-top: 10%;*/">
+                        <div class="d-flex flex-nowrap align-items-center px-3" style="width: 100%;max-width: 85%;overflow: visible;">
+                            <button class="btn text-white" type="button" onclick="scrollContainer(-200, &#39;dragContainer-2&#39;)">
+                                <i class="fas fa-angle-left"></i>
+                            </button>
+                            <div id="dragContainer-2" class="drag-container" role="region" aria-label="Image carousel">
+                                <div class="items-wrapper" style="width: 100%;">
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;">
+                                        <img class="img-built" src="{% static 'img/aviation_casestudy_businessaviation_d.webp' %}" alt="Starlink">
+                                        <h5 class="text-uppercase"> Hàng không kinh doanh </h5>
+                                        <p class="text-start"> Starlink đang mở rộng danh sách các chứng nhận và máy bay được hỗ trợ. Mua thông qua một trong những đại lý ủy quyền của chúng tôi. </p>
+                                    </div>
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;">
+                                        <img class="img-built" src="{% static 'img/aviation_casestudy_aircraftaanufacturers_d.webp' %}">
+                                        <h5 class="text-uppercase"> Nhà sản xuất máy bay </h5>
+                                        <p class="text-start"> Từ máy bay siêu thanh đến máy bay trực thăng và VTOL, Starlink có một giải pháp phần cứng và dịch vụ phù hợp với ứng dụng của bạn. </p>
+                                    </div>
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;">
+                                        <img class="img-built" src="{% static 'img/aviation_casestudy_airlines_d.webp' %}">
+                                        <h5 class="text-uppercase"> Hãng hàng không </h5>
+                                        <p class="text-start"> Với hơn 30.000 chuyến bay trên Nhà ga Hàng không có độ tin cậy cao và phạm vi bảo hiểm toàn cầu đã được chứng minh chuyến bay, Starlink có vị trí tốt để thay đổi trải nghiệm hành khách của bạn. </p>
+                                    </div>
+                                    <div class="item text-start" style="max-width: 350px;min-height: 300px;">
+                                        <img class="img-built" src="{% static 'img/fixedsite_a_casestudy_education_d%20(1).webp' %}">
+                                        <h3>
+                                            <span style="color: rgb(227, 227, 232); background-color: rgb(37, 37, 41);">Retail &amp; Hospitality</span>
+                                        </h3>
+                                        <p class="text-start"> Connect more devices and coordinate in real-time with employees and business partners across sites. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn text-white" type="button" onclick="scrollContainer(200, &#39;dragContainer-2&#39;)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div style="background: url('{% static 'img/aviation_feature1_d.webp' %}') no-repeat center center / cover;color: white;padding-bottom: 0px;">
+        <div class="row" style="padding-bottom: 30%;">
+            <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12 offset-md-0 offset-lg-0 offset-xl-0 offset-xxl-0 col-xl-4 col-md-5" style="padding: 5% 5% 5% 5%;">
+                <div>
+                    <h1 class="text-uppercase fw-bold text-center">Bảo hiểm toàn cầu</h1>
+                    <p class="text-center" style="margin: 0 15% 5%;font-size: smaller;">Starlink đã cung cấp internet tốc độ cao, độ trễ thấp trên hàng chục ngàn chuyến bay và đếm, giữ cho hành khách kết nối từ lúc họ bước lên máy bay và trong suốt chuyến đi vòng quanh thế giới. Xem của chúng tôi Câu hỏi thường gặp để tìm hiểu thêm về nơi Starlink được phép sử dụng hàng không trong chuyển động.</p>
+                </div>
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 d-xl-flex text-center">
+                    <div class="col-md-10 col-lg-4 col-xl-4 offset-md-1 offset-lg-0 offset-xl-0 offset-xxl-1">
+                        <h4 class="text-uppercase">Chuyến bay du lịch</h4>
+                        <p style="font-size: larger;font-weight: 800;">
+                            <strong>55K+</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-10 col-lg-4 col-xl-4 offset-md-1 offset-lg-0 offset-xl-0 offset-xxl-1">
+                        <h4 class="text-uppercase">Giờ bay</h4>
+                        <p style="font-size: larger;font-weight: 800;">
+                            <strong>110K+</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-10 col-lg-4 col-xl-4 offset-md-1 offset-lg-0 offset-xl-0 offset-xxl-1">
+                        <h4 class="text-uppercase">Miles du lịch</h4>
+                        <p style="font-size: larger;font-weight: 800;">
+                            <strong>55M+</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0 text-white" style="background-color: black;">
+        <div class="col-md-6 col-xl-6 col-xxl-6 offset-md-0 offset-xxl-0 d-md-flex align-items-md-center">
+            <div style="padding: 0 10%;">
+                <h2 class="text-uppercase fw-bold">Hỗ Trợ Hàng Không Chuyên Dụng</h2>
+                <p>Đội ngũ Hàng Không 24/7 của chúng tôi cung cấp hỗ trợ qua điện thoại, quản lý tài khoản chuyên biệt và các nhóm đảm bảo độ tin cậy của chuyến bay.</p>
+                <p>Đội ngũ Kỹ thuật của chúng tôi cam kết mang đến kết nối ổn định thông qua việc giám sát hiệu suất độ chính xác cao và dữ liệu thời gian thực.</p>
+            </div>
+        </div>
+        <div class="col-md-6 offset-md-0 offset-xl-0 offset-xxl-0 order-first order-md-last order-1">
+            <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/updates_blog6_d.webp' %}" style="width: 100%;height: 100%;">
+        </div>
+    </div>
+    <div class="row g-0 text-white" style="background-color: #000000;">
+        <div class="col-md-6 offset-md-0 offset-xl-0 offset-xxl-0 order-sm-last order-md-first order-xs-last">
+            <img class="rounded img-fluid w-100 fit-cover" src="{% static 'img/aviation_feature3_d.webp' %}" style="width: 100%;height: 100%;">
+        </div>
+        <div class="col-md-6 col-xl-6 col-xxl-6 offset-md-0 offset-xxl-0 d-md-flex align-items-md-center">
+            <div style="padding: 0 10%;">
+                <h2 class="text-uppercase fw-bold">Mạng Lưới Laser Không Gian</h2>
+                <p>Các laser quang học của Starlink truyền dữ liệu giữa các vệ tinh trong chòm sao Starlink, cung cấp dịch vụ liên tục ở những khu vực xa trạm mặt đất của SpaceX – đảm bảo kết nối cho các chuyến bay qua đại dương và vùng cực.</p>
+                <p>Chòm sao Starlink hiện có hơn 9.000 laser truyền tải hơn 10 petabyte dữ liệu mỗi ngày. Mỗi liên kết laser có thể duy trì tốc độ 100 Gbps, kết nối khoảng cách lên tới 3.300 dặm (5.300 km) và giữ cho mạng lưới luôn hoạt động với 99,99% thời gian liên tục.</p>
+            </div>
+        </div>
+    </div>
+    <div style="background: url('{% static 'img/home_illustriation1_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <div class="container">
+            <div class="row mb-2" style="padding: 10% 5%;">
+                <div class="col-md-8 col-xl-8 text-center mx-auto" style="color: white;">
+                    <h2 class="display-6 fw-bold text-uppercase">Luôn kết nối khi đang bay</h2>
+                    <p>Hoàn tất biểu mẫu để đặt lịch tư vấn với bộ phận bán hàng.</p>
+                    <div class="d-flex justify-content-center" style="padding: 5%;">
+                        <button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;width: auto;max-width: 200px;font-size: smaller;font-weight: bold;">LIÊN HỆ VỚI CHÚNG TÔI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row testimonial-row">
+                <div class="col-md-12 col-xl-4 col-xxl-4 col-lg-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-uppercase">Độ Tin Cậy</h3>
+                        <p class="testimonial-text">“Starlink rất nhanh. Chúng tôi nhận được 200 Mbps trên máy bay. Thật sự còn nhanh hơn nhiều hộ gia đình ở Bắc Mỹ, nên bạn cảm giác như đang ở nhà hoặc tại văn phòng. Đây là một sản phẩm vô cùng nhanh và đáng tin cậy do SpaceX thiết kế.”</p>
+                        <p class="testimonial-author">— Alex Wilcox, Đồng sáng lập kiêm CEO JSX</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xl-4 col-xxl-4 col-lg-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-uppercase">Đột Phá Công Nghệ</h3>
+                        <p class="testimonial-text">“Thông qua Starlink, SpaceX đã tạo ra bước tiến công nghệ quan trọng nhất cho ngành hàng không tư nhân trong 20 năm qua. Kết nối đáng tin cậy là yếu tố sống còn với khách hàng của chúng tôi và lần đầu tiên, công nghệ đã sẵn sàng để đáp ứng điều đó.”</p>
+                        <p class="testimonial-author">— Jay Heublein, Phó Chủ tịch Bảo trì của FlexJet</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xl-4 col-xxl-4 col-lg-4">
+                    <div class="testimonial-card">
+                        <h3 class="text-uppercase">Phủ Sóng Toàn Cầu</h3>
+                        <p class="testimonial-text">“SpaceX thực sự đã ‘giải mã thành công’—về mặt công nghệ—để có thể cung cấp băng thông rộng và chất lượng cao cho máy bay với phạm vi toàn cầu.”</p>
+                        <p class="testimonial-author">— Peter Ingram, CEO Hawaiian Airlines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_business %}

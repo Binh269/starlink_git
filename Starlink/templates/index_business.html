@@ -1,0 +1,198 @@
+{% extends "base_business.html" %}
+{% load static %}
+
+{% block main_business %}
+    <div style="background: url('{% static 'img/home_illustriation1_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <section class="py-4 py-xl-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.88)), url('{% static 'img/business_home_a_hero_d.webp' %}') no-repeat center center /cover;min-height: 500px;">
+            <div class="main">
+                <p style="margin-top: 40px;text-align: center;color: white;font-size: clamp(20px, 5vw, 60px);margin-bottom: 0rem;"><br>
+                    <strong>STARLINK CHO DOANH NGHIỆP</strong>
+                </p>
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;">
+                    <strong>Internet tốc độ cao đáng tin cậy cho các doanh nghiệp.</strong>
+                </p>
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;">
+                    <strong>Bắt đầu từ 80Triệu/tháng với chi phí phần cứng là 20Triệu.</strong>
+                </p>
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 2.5vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;padding: 5% 20%;">
+                    <span style="text-decoration: underline;">Liên hệ với đội ngũ của chúng tôi</span> hoặc <span style="text-decoration: underline;">xem hướng dẫn mua hàng</span>.
+                </p>
+            </div>
+            <form class="d-flex justify-content-center flex-wrap align-items-end row" method="post" layber="">
+                <div class="row text-white" style="margin-top: clamp(10%,1vh,15%);">
+                    <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12">
+                        <label class="form-label" for="email-1">Địa chỉ dịch vụ</label>
+                        <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);">
+                            <input class="form-control" type="text" id="email-1" name="text" placeholder="NHẬP VÀ CHỌN" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;">
+                            <button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url({% static 'img/circular-target-shooting-interface-symbol.png' %});background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                        <button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;">ĐẶT HÀNG NGAY </button>
+                    </div>
+                </div>
+                <a class="text-center" href="{% url 'map' %}" style="white-space: nowrap;"><br>
+                    <span style="background-color: initial;">XEM BẢN ĐỒ TÍNH KHẢ DỤNG &amp; TỐC ĐỘ</span>
+                    <i class="fas fa-chevron-right" style="margin-left: 1%;"></i>
+                </a>
+            </form>
+        </section>
+        <section class="py-4 py-xl-5" style="color: white;">
+            <div class="container" id="feature-section" style="width: 100%;height: 100%;">
+                <div class="row">
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/speed-1.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold text-center" style="padding: 5%;">NHANH CHÓNG</h1>
+                        <span class="text-center">Tải xuống: 40-220 Mbps<br>Tải lên: 8-25 Mbps<br>Độ trễ: 20-60 ms</span>
+                    </div>
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/worldwide-1.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold text-center" style="padding: 5%;">MỌI NƠI</h1>
+                        <span class="text-center">Kết nối hầu hết mọi trang web</span>
+                    </div>
+                    <div class="col-md-4 justify-content-start align-items-center d-flex flex-column">
+                        <img src="{% static 'img/shield.png' %}" width="50" height="50">
+                        <h1 class="text-uppercase fw-bold" style="padding: 5%;">TÁI TẠO</h1>
+                        <span class="text-center">Cải thiện tính liên tục kinh doanh</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="background: url('{% static 'img/residentaial_illustriation2_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;">
+            <div class="row gy-4 gy-md-0" style="max-width: 100%;">
+                <div class="col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-1 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1 khung_ngoai" style="padding: 0 15px 10px 0;min-height: 400px;margin-right: 10px;">
+                    <div class="row fixed_site" style="padding-top: 7%;background: url('{% static 'img/roam_b_feature2_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="col-sm-11 col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
+                            <div>
+                                <h3 class="text-uppercase fw-bold" href="#" style="white-space: nowrap;">TRẠM CỐ ĐỊNH</h3>
+                                <p class="my-3">Kết nối cho doanh nghiệp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-4 offset-sm-3 offset-md-10 offset-xl-0 khung_ngoai" style="padding: 0 0 10px 15px;min-height: 400px;margin-left: 10px;">
+                    <div class="row mobility" style="padding-top: 7%;background: url('{% static 'img/business_home_a_landmobility_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
+                            <div>
+                                <h3 class="text-uppercase fw-bold" href="#" style="white-space: nowrap;">Di động trên đất liền</h3>
+                                <p class="my-3">Kết nối di động trên đất liền</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 gy-md-0" style="max-width: 100%;padding-top: 2%;">
+                <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-sm-0 offset-md-1 offset-lg-1 offset-xl-1 khung_ngoai" style="padding: 0 15px 10px 0;min-height: 400px;margin-right: 10px;">
+                    <div class="row maritime" style="padding-top: 7%;background: url('{% static 'img/business_home_a_maritime_d.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
+                            <div>
+                                <h1 class="text-uppercase fw-bold" href="#">Hàng hải</h1>
+                                <p class="my-3">Kết nối trên biển</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-xl-0 khung_ngoai" style="padding: 0 0 10px 15px;min-height: 400px;margin-left: 10px;">
+                    <div class="row direct_to_cell" style="padding-top: 7%;background: url('{% static 'img/Aviation_hero_d2.webp' %}') no-repeat center center / cover;color: white;width: auto;height: 100%;">
+                        <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-10 offset-sm-1 offset-md-1 offset-lg-1 offset-xl-1 offset-xxl-1 col-xl-4 col-md-5">
+                            <div>
+                                <h1 class="text-uppercase fw-bold" href="#">Hàng không</h1>
+                                <p class="my-3">Kết nối trong khi ở trên không</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="py-4 py-xl-5" style="color: white;">
+            <div style="height: 290px;padding-top: 7%;">
+                <p style="text-align: center;color: white;width: auto;font-size: clamp(8px, 3vw, 35px);height: auto;font-weight: 600;margin-bottom: auto;">
+                    <strong>GIỮ DOANH NGHIỆP CỦA BẠN LUÔN KẾT NỐI</strong>
+                </p>
+                <div class="justify-content-center flex-row align-items-center flex-wrap" style="display: flex;margin: 2% 20%;">
+                    <span style="padding: 0 10px;text-align: center;">Kết nối nhân viên giữa các địa điểm, giám sát thiết bị IoT và sao lưu mạng, ngay cả ở những nơi hẻo lánh nhất trên toàn cầu.</span>
+                </div>
+            </div>
+        </section>
+        <div style="background: url('{% static 'img/home_illustriation1_d.webp' %}') no-repeat left center / 50%;color: white;background-attachment: fixed;background-color: black;padding: 5%;">
+            <div class="row gy-4 gy-md-0">
+                <div class="col-md-5 col-lg-5 col-xl-5 col-xxl-5 offset-xl-0 offset-xxl-0 d-md-flex align-items-md-center" style="margin-left: 5%;">
+                    <div>
+                        <h2 class="text-uppercase fw-bold">DỄ DÀNG KẾT NỐI TRỰC TUYẾN</h2>
+                        <p>Bộ Starlink đến với mọi thứ cần thiết để kết nối trực tuyến trong vài phút. Tất cả những gì bạn cần là tầm nhìn thoáng đãng lên bầu trời.</p>
+                        <p>Tải ứng dụng Starlink để xác định vị trí lắp đặt tối ưu của bạn.</p>
+                        <div class="row text-uppercase" style="text-align: start;">
+                            <a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,50px);text-align: start;width: auto;">
+                                <span style="color: white; background-color: black;">Tải xuống cho Android</span>
+                                <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
+                            </a>
+                            <a class="btn btn-lg col-xl-5" role="button" href="#" style="color: white;font-size: clamp(9px , 1vw,20px);text-align: start;width: auto;">
+                                <span style="color: white; background-color: black;">Tải xuống cho iOS</span>
+                                <i class="fas fa-angle-right" style="margin-left: 10px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-6 offset-xl-0">
+                    <img class="rounded img-fluid" src="{% static 'img/business_home_a_feature1_d.webp' %}" style="width: 100%;height: 100%;">
+                </div>
+            </div>
+            <div class="row gy-4 gy-md-0" style="margin-top: 10%;">
+                <div class="col-md-6"><img class="rounded img-fluid" src="{% static 'img/updates_blog6_d.webp' %}" style="width: 100%;height: 100%;"></div>
+                <div class="col-md-5 col-xxl-5 offset-xxl-0 d-md-flex align-items-md-center" style="margin-left: 5%;">
+                    <div>
+                        <h2 class="text-uppercase fw-bold">DỊCH VỤ ƯU TIÊN 24/7</h2>
+                        <p>Khách hàng Dữ liệu Ưu tiên được ưu tiên trên mạng và nhận tốc độ nhanh hơn liên tục.</p>
+                        <p>Khách hàng sử dụng Gói Ưu tiên cũng sẽ được hưởng hỗ trợ ưu tiên 24/7, địa chỉ IPv4 có thể định tuyến công khai và bao gồm Thỏa thuận Cấp độ Dịch vụ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: url('{% static 'img/home_illustriation2_d.webp' %}') no-repeat right center / 50%;color: white;background-attachment: fixed;background-color: black;height: auto;">
+        <div style="background: url('{% static 'img/business_home_a_feature1_d.webp' %}') no-repeat center center / cover;color: white;padding: 5% 0 20%;">
+            <div class="row" style="padding-top: 7%;">
+                <div class="col-md-9 col-lg-6 col-xl-6 col-xxl-6 offset-md-0 offset-lg-6 offset-xl-6 offset-xxl-6 col-xl-4 col-md-5" style="padding: 5% 5% 5% 5%;">
+                    <div>
+                        <h1 class="text-uppercase fw-bold">VỊ TRÍ DỊCH VỤ KHÔNG GIỚI HẠN</h1>
+                        <p class="my-3">Starlink lý tưởng cho các khu vực nông thôn và hẻo lánh. Sau khi đặt hàng Starlink đầu tiên, bạn có thể thêm bao nhiêu địa điểm tùy ý trên cổng tài khoản của mình.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background: url('{% static 'img/home_feature3_d.webp' %}') no-repeat center center / cover;color: white;padding: 5% 0 20%;">
+            <div class="row" style="padding-top: 7%;">
+                <div class="col-md-7 col-lg-7 col-xl-7 col-xxl-7 offset-md-2 offset-lg-0 offset-xl-1 col-xl-4 col-md-5 offset-md-3" style="padding: 0 5% 5% 5%;margin-left: 1px;">
+                    <div>
+                        <h1 class="text-uppercase fw-bold" style="white-space: normal;font-size: clamp(15px,2vw,30px);">ĐƯỢC THIẾT KẾ BỞI SPACEX</h1>
+                        <p class="my-3">Là nhà cung cấp dịch vụ phóng hàng đầu thế giới – và là nhà cung cấp duy nhất sở hữu tên lửa tái sử dụng cấp quỹ đạo – SpaceX có kinh nghiệm sâu rộng trong cả lĩnh vực tàu vũ trụ và vận hành trên quỹ đạo.</p>
+                        <a class="btn btn-lg col-xl-5 text-uppercase" role="button" href="{% url 'technology' %}" style="color: white;font-size: clamp(9px , 0.5vw,20px);text-align: start;width: auto;border: 1px solid white;">TÌM HIỂU THÊM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mb-2" style="padding-top: 10%;">
+                <div class="col-md-8 col-xl-6 text-center mx-auto" style="color: white;">
+                    <h2 class="display-6 fw-bold">THỬ 30 NGÀY</h2>
+                    <p>Hãy thử Starlink trong 30 ngày và nếu không hài lòng, hãy hoàn lại tiền đầy đủ.</p>
+                </div>
+            </div>
+            <form class="d-flex justify-content-center flex-wrap align-items-end row" method="post" layber="">
+                <div class="row">
+                    <div class="col-sm-7 col-md-5 col-lg-5 col-xl-5 col-xxl-4 offset-sm-1 offset-md-2 offset-lg-3 offset-xl-3 offset-xxl-3 col-12" style="margin-top: 10px;">
+                        <label class="form-label" for="email-2">Địa chỉ dịch vụ</label>
+                        <div class="input-group" style="background-color: hsla(0, 0%, 100%, .15);">
+                            <input class="form-control" type="text" id="email-2" name="text" placeholder="TYPE AND SELECT" style="background-color: hsla(0, 0%, 100%, .15);color: white;caret-color: #fff;border: none;">
+                            <button class="btn" type="button" style="background-color: hsla(0, 0%, 100%, .15);background-image: url({% static 'img/circular-target-shooting-interface-symbol.png' %});background-position: center;background-repeat: no-repeat;padding-right: 25px;border: none;"></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 offset-xxl-0 col-12 justify-content-end d-flex flex-column">
+                        <button class="btn w-100 w-md-auto d-block" type="submit" style="color: black;background-color: white;height: auto;margin-top: 10px;width: auto;font-weight: 700;">Đặt hàng ngay</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock main_business %}
